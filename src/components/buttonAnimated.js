@@ -31,7 +31,7 @@ const ToggleButton = () => {
 
   const backgroundColorAnim = positionButton.interpolate({
     inputRange: [0, 1],
-    outputRange: ['#767577', '#81b0ff'],
+    outputRange: [colors.tertiary, colors.primary],
   });
 
   const initialOpacityOn = positionButton.interpolate({
@@ -106,9 +106,12 @@ const ToggleButton = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
+    justifyContent: 'space-between',
+    backgroundColor: colors.Quaternary,
+    padding: 0,
+    marginTop:5,
+    left:-20,
+    
   },
   basicStyle: {
     height: 20,
@@ -137,6 +140,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#81b0ff',
     height: 30,
     width: 60,
+    
   },
 });
 

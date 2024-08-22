@@ -628,6 +628,26 @@ export default function Home() {
                   </Swiper>
                 </View>
 
+
+<View style={{
+width:'85%'
+
+}}>
+<Text  style={{
+                      fontSize: 28,
+                      color: colors.secondary,
+                      textAlign: 'left'
+                      
+                      }}>
+
+Controle du lumiere
+
+</Text>
+
+
+
+</View>
+
                 {/* WE STOPPED HERE */}
                 {/* div cards  now */}
                 <View
@@ -638,7 +658,7 @@ export default function Home() {
                     color: colors.secondary,
                     flexDirection: 'row',
                     justifyContent: 'space-between',
-                    width: '80%',
+                    width: '95%',
                     height: 150,
                   }}>
                   <ScrollView
@@ -681,7 +701,7 @@ export default function Home() {
                             color: colors.secondary,
                             marginBottom: 8,
                           }}>
-                          27 °c
+                          Tout la maison
                         </Text>
 
                         <View
@@ -692,12 +712,13 @@ export default function Home() {
                           <ButtonAnimated />
 
                           {/* WE STOPPED HERE */}
-                          {/* 
-  { (<ButtonAnimated/>)
-  ? <Text>true</Text>: <Text>FALSE</Text>} */}
+                     
+
+
                         </View>
                       </Card.Content>
                     </Card>
+
 
                     <Card
                       elevation={4}
@@ -716,10 +737,10 @@ export default function Home() {
                           alignItems: 'center',
                         }}>
                         <Image
-                          source={icons.nuage}
+                          source={icons.chambre1}
                           style={{
-                            height: 50,
-                            width: 50,
+                            height: 30,
+                            width: 30,
                             tintColor: colors.primary,
                             marginBottom: 6,
                           }}
@@ -727,23 +748,307 @@ export default function Home() {
 
                         <Text
                           style={{
-                            fontSize: 18,
+                            fontSize: 15,
                             fontWeight: 'bold',
-                            color: colors.white,
+                            color: colors.secondary,
                             marginBottom: 8,
                           }}>
-                          27 °c
+                          L.chambre1
                         </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                     
+
+
+                        </View>
+                      </Card.Content>
+                    </Card>
+
+
+
+
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.chambre2}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
                         <Text
                           style={{
                             fontSize: 15,
-
+                            fontWeight: 'bold',
                             color: colors.secondary,
+                            marginBottom: 8,
                           }}>
-                          Algerie
+                          L.chambre2
                         </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                     
+
+
+                        </View>
                       </Card.Content>
                     </Card>
+
+
+
+
+
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.cuisine1}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          Cuisine
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                     
+
+
+                        </View>
+                      </Card.Content>
+                    </Card>
+
+
+
+
+
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.outdoor1}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          home
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                     
+
+
+                        </View>
+                      </Card.Content>
+                    </Card>
+
+
+
+
+
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.salon1}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          Salon
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                     
+
+
+                        </View>
+                      </Card.Content>
+                    </Card>
+
+
+
+
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.fenetre1}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          fenetre1
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                     
+
+
+                        </View>
+                      </Card.Content>
+                    </Card>
+                    
                   </ScrollView>
                 </View>
               </View>

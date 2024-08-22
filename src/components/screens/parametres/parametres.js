@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../../header';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -6,11 +7,12 @@ import { NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 
 
-const profile = () => {
+
+export default function Parametres() {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: colors.Quaternary}}>
       <View style={{flex: 1, backgroundColor: colors.Quaternary}}>
-        <Header title="profile" />
+        <Header title="parameters" />
         <ScrollView>
           <View
             style={{
@@ -29,7 +31,5 @@ const profile = () => {
         </ScrollView>
       </View>
     </SafeAreaView>
-  )
+  );
 }
-
-export default profile
