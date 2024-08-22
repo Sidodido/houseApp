@@ -628,28 +628,23 @@ export default function Home() {
                   </Swiper>
                 </View>
 
+                {/* TEXT Controle du lumiere */}
 
-<View style={{
-width:'85%'
-
-}}>
-<Text  style={{
-                      fontSize: 28,
+                <View
+                  style={{
+                    width: '85%',
+                  }}>
+                  <Text
+                    style={{
+                      fontSize: 25,
                       color: colors.secondary,
-                      textAlign: 'left'
-                      
-                      }}>
+                      textAlign: 'left',
+                    }}>
+                    Controle du lumiere
+                  </Text>
+                </View>
 
-Controle du lumiere
-
-</Text>
-
-
-
-</View>
-
-                {/* WE STOPPED HERE */}
-                {/* div cards  now */}
+                {/* div cards  lumiere */}
                 <View
                   style={{
                     marginLeft: 20,
@@ -712,13 +707,9 @@ Controle du lumiere
                           <ButtonAnimated />
 
                           {/* WE STOPPED HERE */}
-                     
-
-
                         </View>
                       </Card.Content>
                     </Card>
-
 
                     <Card
                       elevation={4}
@@ -764,16 +755,9 @@ Controle du lumiere
                           <ButtonAnimated />
 
                           {/* WE STOPPED HERE */}
-                     
-
-
                         </View>
                       </Card.Content>
                     </Card>
-
-
-
-
 
                     <Card
                       elevation={4}
@@ -819,17 +803,9 @@ Controle du lumiere
                           <ButtonAnimated />
 
                           {/* WE STOPPED HERE */}
-                     
-
-
                         </View>
                       </Card.Content>
                     </Card>
-
-
-
-
-
 
                     <Card
                       elevation={4}
@@ -875,17 +851,9 @@ Controle du lumiere
                           <ButtonAnimated />
 
                           {/* WE STOPPED HERE */}
-                     
-
-
                         </View>
                       </Card.Content>
                     </Card>
-
-
-
-
-
 
                     <Card
                       elevation={4}
@@ -931,17 +899,9 @@ Controle du lumiere
                           <ButtonAnimated />
 
                           {/* WE STOPPED HERE */}
-                     
-
-
                         </View>
                       </Card.Content>
                     </Card>
-
-
-
-
-
 
                     <Card
                       elevation={4}
@@ -987,16 +947,9 @@ Controle du lumiere
                           <ButtonAnimated />
 
                           {/* WE STOPPED HERE */}
-                     
-
-
                         </View>
                       </Card.Content>
                     </Card>
-
-
-
-
 
                     <Card
                       elevation={4}
@@ -1042,15 +995,298 @@ Controle du lumiere
                           <ButtonAnimated />
 
                           {/* WE STOPPED HERE */}
-                     
-
-
                         </View>
                       </Card.Content>
                     </Card>
-                    
                   </ScrollView>
                 </View>
+
+                {/* TEXT Controle du rideaux */}
+
+                <View
+                  style={{
+                    width: '85%',
+                  }}>
+                  <Text
+                    style={{
+                      fontSize: 25,
+                      color: colors.secondary,
+                      textAlign: 'left',
+                    }}>
+                    Controle du rideeaux
+                  </Text>
+                </View>
+
+                {/* div cards  rideaux */}
+                <View
+                  style={{
+                    marginLeft: 20,
+                    fontSize: 18,
+                    marginBottom: 20,
+                    color: colors.secondary,
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    width: '95%',
+                    height: 150,
+                  }}>
+                  <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{
+                      paddingHorizontal: 20,
+                      paddingVertical: 10,
+                    }}>
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.home}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 9,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          Tous les rideaux
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                        </View>
+                      </Card.Content>
+                    </Card>
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.fenetre1}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          R.fenetre 1
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                        </View>
+                      </Card.Content>
+                    </Card>
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.fenetre2}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          R.fenetre 2
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                        </View>
+                      </Card.Content>
+                    </Card>
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.fenetre3}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          R.fenetre 3
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                        </View>
+                      </Card.Content>
+                    </Card>
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        flex: 1,
+                        flexGrow: 1,
+                        marginRight: 20,
+                        width: 130,
+                        height: 130,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                      }}>
+                      <Card.Content
+                        style={{
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.fenetre1}
+                          style={{
+                            height: 30,
+                            width: 30,
+                            tintColor: colors.primary,
+                            marginBottom: 6,
+                          }}
+                        />
+
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 'bold',
+                            color: colors.secondary,
+                            marginBottom: 8,
+                          }}>
+                          R.fenetre 4
+                        </Text>
+
+                        <View
+                          style={{
+                            backgroundColor: colors.Quaternary,
+                            width: 10,
+                          }}>
+                          <ButtonAnimated />
+
+                          {/* WE STOPPED HERE */}
+                        </View>
+                      </Card.Content>
+                    </Card>
+                  </ScrollView>
+                </View>
+
+                {/* div SWIPER  rideaux */}
+
+
+
+
+
+
+
+
               </View>
             </NativeBaseProvider>
           </View>
