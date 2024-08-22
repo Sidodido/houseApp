@@ -6,6 +6,8 @@ const Product = () => {
   return (
     <View>
            <Header title={"Produits"}/>
+           
+           
 
     </View>
   )

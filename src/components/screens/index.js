@@ -1,7 +1,7 @@
 
 import Apparailes from './apparailes/apparailes'
 import Home from './home/home'
-import Parametres from './parametres/parametres'
+import Parametres from './home/parametres/parametres'
 import Statistiques from './statistiques/statistiques'
 import Recherche from './recherche/recherche'
 import Profile from './profile/profile'

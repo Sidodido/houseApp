@@ -180,21 +180,11 @@ const header = ({title, onPress}) => {
                       <Image
                         resizeMode="contain"
                         style={styles.icon}
-                        source={icons.notification}
+                        source={icons.exit}
                       />
                     </TouchableOpacity>
                   </Box>
 
-                  {/* <Actionsheet.Item>{item.label}</Actionsheet.Item>
-                  <TouchableOpacity
-                    onPress={() => handleDeleteItem(index)}
-                    style={styles.exitContainer}>
-                    <Image
-                      resizeMode="contain"
-                      style={styles.icon}
-                      source={icons.notification}
-                    />
-                  </TouchableOpacity> */}
                 </React.Fragment>
               ))}
             </ScrollView>
