@@ -6,17 +6,21 @@ import {
   StyleSheet,
   ScrollView,
 } from 'react-native';
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {colors, icons} from './constants';
 import {
-  Button,
   Actionsheet,
-  useDisclose,
+  
   Box,
-  Center,
   NativeBaseProvider,
 } from 'native-base';
+import { useDisclose } from 'native-base';
+
+import {Dimensions} from 'react-native';
+const {width} = Dimensions.get('window');
+const scale = width / 420;
+
 
 const header = ({title, onPress}) => {
   const navigation = useNavigation();
@@ -105,8 +109,8 @@ const header = ({title, onPress}) => {
           <Image
             resizeMode="contain"
             style={{
-              height: 24,
-              width: 24,
+              height: 24* scale,
+              width: 24* scale,
               tintColor: colors.primary,
             }}
             source={icons.menu}
@@ -115,8 +119,8 @@ const header = ({title, onPress}) => {
 
         <Text
           style={{
-            marginLeft: 12,
-            fontSize: 20,
+            marginLeft: 12* scale,
+            fontSize: 20* scale,
             fontWeight: 'bold',
             flex: 1,
             textAlign: 'center',
@@ -145,29 +149,29 @@ const header = ({title, onPress}) => {
                     style={{
                       flexDirection: 'row',
                       justifyContent: 'space-between',
-                      borderBottomWidth: 1,
+                      borderBottomWidth: 1* scale,
                       borderBottomColor: '#ccc',
-                      marginBottom: 5,
+                      marginBottom: 5* scale,
                     }}>
-                    <Box style={{flex: 1, flexGrow: 1, marginRight: 20}}>
+                    <Box style={{flex: 1, flexGrow: 1, marginRight: 20* scale}}>
                       <Text
                         style={{
-                          marginLeft: 12,
-                          fontSize: 17,
+                          marginLeft: 12* scale,
+                          fontSize: 17* scale,
                           fontWeight: 'bold',
                           flex: 1,
-                          marginBottom: 3,
+                          marginBottom: 3* scale,
                           color: colors.Quaternary,
                         }}>
                         {item.label}
                       </Text>
                       <Text
                         style={{
-                          marginLeft: 12,
-                          fontSize: 14,
+                          marginLeft: 12* scale,
+                          fontSize: 14* scale,
 
                           flex: 1,
-                          marginBottom: 10,
+                          marginBottom: 10* scale,
                           color: colors.secondary,
                         }}>
                         {item.description}
@@ -200,42 +204,42 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    paddingVertical: 16,
-    paddingHorizontal: 20,
+    paddingVertical: 16* scale,
+    paddingHorizontal: 20* scale,
     backgroundColor: colors.Quaternary,
   },
   iconContainer: {
-    height: 45,
-    width: 45,
-    borderRadius: 50,
+    height: 45* scale,
+    width: 45* scale,
+    borderRadius: 50* scale,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: colors.primary,
   },
   exitContainer: {
-    marginLeft: 20,
+    marginLeft: 20* scale,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: -30,
+    marginRight: -30* scale,
   },
   icon: {
-    height: 24,
-    width: 24,
+    height: 24* scale,
+    width: 24* scale,
     tintColor: colors.Quaternary,
   },
   exit: {
-    height: 24,
-    width: 24,
+    height: 24* scale,
+    width: 24* scale,
     tintColor: colors.tertiary,
   },
   deleteButton: {
     position: 'absolute',
-    right: 10,
-    top: 10,
+    right: 10* scale,
+    top: 10* scale,
   },
   deleteIcon: {
-    height: 20,
-    width: 20,
+    height: 20* scale,
+    width: 20* scale,
     tintColor: colors.error,
   },
 });
