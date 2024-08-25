@@ -1,20 +1,33 @@
-import {View, Text, Image, ScrollView,TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
+import React, {useRef, useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../../header';
 import {colors, icons, images} from '../../constants';
-import {Avatar, VStack, Center, NativeBaseProvider,HStack} from 'native-base';
-import {Button, Card,Switch} from 'react-native-paper';
+import {Modal, Center, VStack, NativeBaseProvider, Avatar} from 'native-base';
+import {Button, Card, Switch} from 'react-native-paper';
 import ScrollCardsLumiere from './scrollCardsLumiere';
 import ScrollCardsRideaux from './scrollCardsRideaux';
 import Swiper from 'react-native-swiper';
-import {Dimensions,StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+import Video, {VideoRef} from 'react-native-video';
+import LineChartGases from './lineChartGazes';
+import LineChartFlammes from './lineChartFlammes';
+import LineChartMouvements from './lineChartMouvements';
 
 const {width} = Dimensions.get('window');
 const scale = width / 420; // based on iphone 5s's width
 
 export default function Home() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [modalVisible, setModalVisible] = React.useState(false);
+  const [size, setSize] = React.useState('lg');
 
+  const handleSizeClick = newSize => {
+    setSize(newSize);
+    setModalVisible(!modalVisible);
+  };
+
+  const videoRefs = React.createRef();
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: colors.Quaternary}}>
       <View style={{flex: 1, backgroundColor: colors.Quaternary}}>
@@ -351,10 +364,10 @@ export default function Home() {
                         style={{
                           backgroundColor: colors.primary,
                           width: 15 * scale,
-                          height:  6 * scale,
+                          height: 6 * scale,
                           borderRadius: 4 * scale,
                           marginLeft: 3 * scale,
-                          marginRight: 3* scale,
+                          marginRight: 3 * scale,
                         }}
                       />
                     }
@@ -367,7 +380,6 @@ export default function Home() {
                     }}
                     style={{
                       height: 40 * scale,
-                     
                     }}>
                     <Card
                       elevation={4}
@@ -379,7 +391,6 @@ export default function Home() {
                         shadowColor: colors.white,
                         borderRadius: 30 * scale,
                         justifyContent: 'center',
-
                       }}>
                       <Card.Content
                         style={{
@@ -391,7 +402,7 @@ export default function Home() {
                           resizeMode="contain"
                           source={icons.door1}
                           style={{
-                            height: 24  * scale,
+                            height: 24 * scale,
                             width: 24 * scale,
                             tintColor: colors.primary,
                           }}
@@ -419,7 +430,7 @@ export default function Home() {
                         <Image
                           source={icons.outdoor1}
                           style={{
-                            height: 24  * scale,
+                            height: 24 * scale,
                             width: 24 * scale,
                             tintColor: colors.primary,
                             marginBottom: 6 * scale,
@@ -439,14 +450,13 @@ export default function Home() {
                     <Card
                       elevation={4}
                       style={{
-                        height: 75  * scale,
+                        height: 75 * scale,
                         marginRight: 10 * scale,
                         marginLeft: 10 * scale,
                         backgroundColor: colors.Quaternary,
                         shadowColor: colors.white,
                         borderRadius: 30 * scale,
                         justifyContent: 'center',
-
                       }}>
                       <Card.Content
                         style={{
@@ -502,7 +512,6 @@ export default function Home() {
                         />
                       </Card.Content>
                     </Card>
-
                   </Swiper>
                 </View>
 
@@ -510,11 +519,11 @@ export default function Home() {
 
                 <View
                   style={{
-                    fontSize: 18* scale,
-                    marginBottom: 20* scale,
+                    fontSize: 18 * scale,
+                    marginBottom: 20 * scale,
                     color: colors.secondary,
                     width: 200 * scale,
-                    height: 80* scale,
+                    height: 80 * scale,
                   }}>
                   <Swiper
                     dot={
@@ -522,10 +531,10 @@ export default function Home() {
                         style={{
                           backgroundColor: colors.secondary,
                           width: 6 * scale,
-                          height: 6* scale,
-                          borderRadius: 5* scale,
-                          marginLeft: 3* scale,
-                          marginRight: 3* scale,
+                          height: 6 * scale,
+                          borderRadius: 5 * scale,
+                          marginLeft: 3 * scale,
+                          marginRight: 3 * scale,
                         }}
                       />
                     }
@@ -533,34 +542,33 @@ export default function Home() {
                       <View
                         style={{
                           backgroundColor: colors.primary,
-                          width: 15* scale,
-                          height: 6* scale,
+                          width: 15 * scale,
+                          height: 6 * scale,
                           borderRadius: 5,
-                          marginLeft: 3* scale,
-                          marginRight: 3* scale,
+                          marginLeft: 3 * scale,
+                          marginRight: 3 * scale,
                         }}
                       />
                     }
                     paginationStyle={{
                       bottom: -5 * scale,
-                      left: 0* scale,
+                      left: 0 * scale,
 
-                      padding: 0* scale,
+                      padding: 0 * scale,
                     }}
                     style={{
-                      height: 40* scale,
+                      height: 40 * scale,
                     }}>
                     <Card
                       elevation={4}
                       style={{
-                        height: 75* scale,
-                        marginRight: 10* scale,
-                        marginLeft: 10* scale,
+                        height: 75 * scale,
+                        marginRight: 10 * scale,
+                        marginLeft: 10 * scale,
                         backgroundColor: colors.Quaternary,
                         shadowColor: colors.white,
-                        borderRadius: 30* scale,
+                        borderRadius: 30 * scale,
                         justifyContent: 'center',
-
                       }}>
                       <Card.Content
                         style={{
@@ -571,8 +579,8 @@ export default function Home() {
                         <Image
                           source={icons.mouvement1}
                           style={{
-                            height: 24* scale,
-                            width: 24* scale,
+                            height: 24 * scale,
+                            width: 24 * scale,
                             tintColor: colors.primary,
                           }}
                         />
@@ -580,20 +588,20 @@ export default function Home() {
                         <Image
                           source={icons.fire1}
                           style={{
-                            height: 24* scale,
-                            width: 24* scale,
+                            height: 24 * scale,
+                            width: 24 * scale,
                             tintColor: colors.primary,
-                            marginBottom: 6* scale,
+                            marginBottom: 6 * scale,
                           }}
                         />
 
                         <Image
                           source={icons.fire2}
                           style={{
-                            height: 24* scale,
-                            width: 24* scale,
+                            height: 24 * scale,
+                            width: 24 * scale,
                             tintColor: colors.primary,
-                            marginBottom: 6* scale,
+                            marginBottom: 6 * scale,
                           }}
                         />
                       </Card.Content>
@@ -602,14 +610,14 @@ export default function Home() {
                     <Card
                       elevation={4}
                       style={{
-                        height: 75* scale,
-                        marginRight: 10* scale,
-                        marginLeft: 10* scale,
+                        height: 75 * scale,
+                        marginRight: 10 * scale,
+                        marginLeft: 10 * scale,
                         backgroundColor: colors.Quaternary,
                         shadowColor: colors.white,
                         justifyContent: 'center',
-                        
-                        borderRadius: 30* scale,
+
+                        borderRadius: 30 * scale,
                       }}>
                       <Card.Content
                         style={{
@@ -620,8 +628,8 @@ export default function Home() {
                         <Image
                           source={icons.mouvement1}
                           style={{
-                            height: 24* scale,
-                            width: 24* scale,
+                            height: 24 * scale,
+                            width: 24 * scale,
                             tintColor: colors.primary,
                           }}
                         />
@@ -629,20 +637,20 @@ export default function Home() {
                         <Image
                           source={icons.fire1}
                           style={{
-                            height: 24* scale,
-                            width: 24* scale,
+                            height: 24 * scale,
+                            width: 24 * scale,
                             tintColor: colors.primary,
-                            marginBottom: 6* scale,
+                            marginBottom: 6 * scale,
                           }}
                         />
 
                         <Image
                           source={icons.fire2}
                           style={{
-                            height: 24* scale,
-                            width: 24* scale,
+                            height: 24 * scale,
+                            width: 24 * scale,
                             tintColor: colors.primary,
-                            marginBottom: 6* scale,
+                            marginBottom: 6 * scale,
                           }}
                         />
                       </Card.Content>
@@ -650,119 +658,85 @@ export default function Home() {
                   </Swiper>
                 </View>
 
-
- {/* TEXT Controle du lumiere */}
-
- <View
-        style={{
-          width: '85%',
-        }}>
-        <Text
-          style={{
-            fontSize: 15 * scale,
-            color: colors.secondary,
-            textAlign: 'left',
-          }}>
-          Controle du Lumiere
-        </Text>
-      </View>
-
-<ScrollCardsLumiere/>
-
-
-  {/* TEXT Controle du rideaux */}
-
-  <View
-        style={{
-            width: '85%',
-        }}>
-        <Text
-          style={{
-            fontSize: 15 * scale,
-            color: colors.secondary,
-            textAlign: 'left',
-          }}>
-          Controle des Rideeaux
-        </Text>
-      </View>
-
-
-<ScrollCardsRideaux/>
-
-
-
-
-
-
-{/* text cards  cameras */}
-             <View
-        style={{
-            width: '85%',
-            marginBottom:10 *scale,
-        }}>
-        <Text
-          style={{
-            fontSize: 15 * scale,
-            color: colors.secondary,
-            textAlign: 'left',
-          }}>
-          Controle des Cameras
-        </Text>
-      </View>
-
-                {/* div SWIPER  cameras */}
+                {/* TEXT Controle du lumiere */}
 
                 <View
                   style={{
-                    fontSize: 18* scale,
-                    marginBottom: 20* scale,
-                    color: colors.secondary,
-                    width: 400 *scale,
-                    height: 250 *scale,
+                    width: '85%',
                   }}>
-                  <Swiper
-                    dot={
-                      <View
-                        style={{
-                          backgroundColor: colors.secondary,
-                          width: 6* scale,
-                          height: 6* scale,
-                          borderRadius: 5* scale,
-                          marginLeft: 3* scale,
-                          marginRight: 3* scale,
-                        }}
-                      />
-                    }
-                    activeDot={
-                      <View
-                        style={{
-                          backgroundColor: colors.primary,
-                          width: 15* scale,
-                          height: 6* scale,
-                          borderRadius: 4* scale,
-                          marginLeft: 3* scale,
-                          marginRight: 3* scale,
-                        }}
-                      />
-                    }
-                    paginationStyle={{
-                      bottom: -10* scale,
-                      left: 0* scale,
-
-                      padding: 0,
-                    }}
+                  <Text
                     style={{
-                      height: 40* scale,
+                      fontSize: 15 * scale,
+                      color: colors.secondary,
+                      textAlign: 'left',
+                    }}>
+                    Controle du Lumiere
+                  </Text>
+                </View>
+
+                <ScrollCardsLumiere />
+
+                {/* TEXT Controle du rideaux */}
+
+                <View
+                  style={{
+                    width: '85%',
+                  }}>
+                  <Text
+                    style={{
+                      fontSize: 15 * scale,
+                      color: colors.secondary,
+                      textAlign: 'left',
+                    }}>
+                    Controle des Rideeaux
+                  </Text>
+                </View>
+
+                <ScrollCardsRideaux />
+
+                {/* text cards  cameras */}
+                <View
+                  style={{
+                    width: '85%',
+                    marginBottom: 10 * scale,
+                  }}>
+                  <Text
+                    style={{
+                      fontSize: 15 * scale,
+                      color: colors.secondary,
+                      textAlign: 'left',
+                    }}>
+                    Controle des Cameras
+                  </Text>
+                </View>
+
+                {/* div scroll  cameras */}
+                <View
+                  style={{
+                    fontSize: 18 * scale,
+                    marginBottom: 20 * scale,
+                    color: colors.secondary,
+                    width: 400 * scale,
+                    height: 250 * scale,
+                  }}>
+                  <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{
+                      paddingHorizontal: 0 * scale,
+                      paddingVertical: 0 * scale,
                     }}>
                     <Card
                       elevation={4}
                       style={{
                         height: '100%',
-                        marginRight: 10* scale,
-                        marginLeft: 10* scale,
+                        width: 350 * scale,
+
+                        marginRight: 10 * scale,
+                        marginLeft: 10 * scale,
                         backgroundColor: colors.Quaternary,
                         shadowColor: colors.white,
-                        borderRadius: 30* scale,
+                        borderRadius: 30 * scale,
                       }}>
                       <Card.Content
                         style={{
@@ -770,55 +744,239 @@ export default function Home() {
                           justifyContent: 'space-between',
                           alignItems: 'center',
                         }}>
-
-
-
-
-
-
-                        </Card.Content>
+                        <View style={styles.container}>
+                          <Video
+                            source={require('./video3.mp4')}
+                            style={styles.video}
+                            ref={videoRefs}
+                            onLoadStart={() =>
+                              console.log('Video loading started')
+                            }
+                            onLoad={() => setVideoLoaded(true)}
+                            isLooping={true}
+                            isMuted={false}
+                            shouldPlay={true}
+                            onError={error =>
+                              console.error('Video error:', error)
+                            }
+                          />
+                        </View>
+                      </Card.Content>
                     </Card>
                     <Card
                       elevation={4}
                       style={{
                         height: '100%',
-                        marginRight: 10* scale,
-                        marginLeft: 10* scale,
+                        width: 350 * scale,
+
+                        marginRight: 10 * scale,
+                        marginLeft: 10 * scale,
                         backgroundColor: colors.Quaternary,
                         shadowColor: colors.white,
-                        borderRadius: 30* scale,
+                        borderRadius: 30 * scale,
                       }}>
                       <Card.Content
                         style={{
                           flexDirection: 'row',
                           justifyContent: 'space-between',
                           alignItems: 'center',
-                        }}></Card.Content>
+                        }}>
+                        <View>
+                          <Video
+                            source={require('./video3.mp4')}
+                            style={styles.video}
+                            ref={videoRefs}
+                            onLoadStart={() =>
+                              console.log('Video loading started')
+                            }
+                            onLoad={() => setVideoLoaded(true)}
+                            isLooping={true}
+                            isMuted={false}
+                            shouldPlay={true}
+                            onError={error =>
+                              console.error('Video error:', error)
+                            }
+                          />
+                        </View>
+                      </Card.Content>
                     </Card>
-                   
+
                     <Card
                       elevation={4}
                       style={{
                         height: '100%',
-                        marginRight: 10* scale,
-                        marginLeft: 10* scale,
+                        width: 350 * scale,
+
+                        marginRight: 10 * scale,
+                        marginLeft: 10 * scale,
                         backgroundColor: colors.Quaternary,
                         shadowColor: colors.white,
-                        borderRadius: 30* scale,
+                        borderRadius: 30 * scale,
                       }}>
                       <Card.Content
                         style={{
                           flexDirection: 'row',
                           justifyContent: 'space-between',
                           alignItems: 'center',
-                        }}></Card.Content>
+                        }}>
+                        <View style={styles.container}>
+                          <Video
+                            source={require('./video3.mp4')}
+                            style={styles.video}
+                            ref={videoRefs}
+                            onLoadStart={() =>
+                              console.log('Video loading started')
+                            }
+                            onLoad={() => setVideoLoaded(true)}
+                            isLooping={true}
+                            isMuted={true}
+                            shouldPlay={true}
+                            onError={error =>
+                              console.error('Video error:', error)
+                            }
+                          />
+                        </View>
+                      </Card.Content>
                     </Card>
-
-
-
-
-                  </Swiper>
+                  </ScrollView>
                 </View>
+
+
+                {/* text caracteristiques gaz */}
+
+
+                <View
+                  style={{
+                    width: '85%',
+                    marginBottom: 10 * scale,
+                  }}>
+                  <Text
+                    style={{
+                      fontSize: 15 * scale,
+                      color: colors.secondary,
+                      textAlign: 'left',
+                    }}>
+                    Controle des Capteurs
+                  </Text>
+                </View>
+
+                {/* div scroll  caracteristiques gaz */}
+
+
+<Text>Gazes</Text>
+                <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{
+                      paddingHorizontal: 0 * scale,
+                      paddingVertical: 0 * scale,
+                    }}>
+
+
+
+<View style={{
+flexDirection:'row',
+gap:20
+
+}}>
+
+
+
+                     
+ 
+<LineChartGases/>
+<LineChartGases/>
+<LineChartGases/>
+<LineChartGases/>
+<LineChartGases/>
+
+
+                      
+</View>
+                    </ScrollView>
+
+
+
+
+
+
+                    <Text>Flammes</Text>
+                <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{
+                      marginHorizontal: 10 * scale,
+                      paddingVertical: 0 * scale,
+                    }}>
+
+
+
+<View style={{
+flexDirection:'row',
+gap:20
+
+}}>
+
+
+
+                     
+ 
+<LineChartFlammes/>
+<LineChartFlammes/>
+<LineChartFlammes/>
+<LineChartFlammes/>
+<LineChartFlammes/>
+
+
+                      
+</View>
+                    </ScrollView>
+
+
+
+
+
+
+
+
+
+                    <Text>Mouvements</Text>
+                <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{
+                      paddingHorizontal: 0 * scale,
+                      paddingVertical: 0 * scale,
+                    }}>
+
+
+
+<View style={{
+flexDirection:'row',
+gap:20
+
+}}>
+
+
+
+                     
+ 
+<LineChartMouvements/>
+<LineChartMouvements/>
+<LineChartMouvements/>
+<LineChartMouvements/>
+<LineChartMouvements/>
+
+
+                      
+</View>
+                    </ScrollView>
+
+
+
+
+
+
               </View>
             </NativeBaseProvider>
           </View>
@@ -828,4 +986,24 @@ export default function Home() {
   );
 }
 
-
+var styles = StyleSheet.create({
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  video: {
+    width: 320 * scale,
+    height: '100%',
+  },
+  backgroundColor: {
+    // add your styles here
+  },
+});

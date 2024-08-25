@@ -1,4 +1,7 @@
 {
   "name": "houseApp",
-  "displayName": "houseApp"
+  "displayName": "houseApp",
+  "packagerOpts": {
+    "config": "metro.config.js"
+  }
 }

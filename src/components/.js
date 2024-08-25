@@ -1,675 +1,915 @@
-import {View, Text, Image,ScrollView} from 'react-native';
-import React, {useRef} from 'react';
+import {View, Text, Image, ScrollView,TouchableOpacity} from 'react-native';
+import React, {useRef,useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../../header';
 import {colors, icons, images} from '../../constants';
-import {Avatar, VStack, Center, NativeBaseProvider} from 'native-base';
-import {Button, Card} from 'react-native-paper';
-
+import {Avatar, VStack, Center, NativeBaseProvider,HStack} from 'native-base';
+import {Button, Card,Switch} from 'react-native-paper';
+import ScrollCardsLumiere from './scrollCardsLumiere';
+import ScrollCardsRideaux from './scrollCardsRideaux';
 import Swiper from 'react-native-swiper';
+import {Dimensions,StyleSheet} from 'react-native';
+import Video, {VideoRef} from 'react-native-video';
+import video from './video2.mp4';
 
+
+const {width} = Dimensions.get('window');
+const scale = width / 420; // based on iphone 5s's width
+const videos = [
+  { uri: require('./video3.mp4'), title: 'Video 1' },
+  { uri: require('./video3.mp4'), title: 'Video 2' },
+  { uri: require('./video3.mp4'), title: 'Video 3' },
+];
 export default function Home() {
+
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const videoRefs = videos.map(() => React.createRef());
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: colors.Quaternary}}>
       <View style={{flex: 1, backgroundColor: colors.Quaternary}}>
         <Header title="Home" />
         <ScrollView>
-
-<View
-          style={{
-            width: '100%', // adjust the width to your needs
-            height: 10000, // adjust the height to your needs
-            backgroundColor: colors.tertiary,
-            borderRadius: 150, // this will create a semi-circle
-            position: 'fixed',
-            top: 0,
-            left: 0,
-          }}>
-          <NativeBaseProvider>
-            <Avatar
-              mt="5"
-              bg="purple.600"
-              alignSelf="center"
-              size="2xl"
-              source={icons.avatar}></Avatar>
-
-            <View
-              style={{
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              {/* avatar */}
-              <Text
+          <View
+            style={{
+              width: '100%', // adjust the width to your needs
+              height: 10000, // adjust the height to your needs
+              backgroundColor: colors.tertiary,
+              borderRadius: 150 * scale, // this will create a semi-circle
+              position: 'fixed',
+              top: 0,
+              left: 0,
+            }}>
+            <NativeBaseProvider>
+              <Avatar
                 style={{
-                  fontSize: 18,
-                  fontWeight: 'bold',
-                  color: colors.secondary,
+                  marginTop: 20 * scale,
+                  height: 80 * scale,
+                  width: 80 * scale,
+                }}
+                bg="purple.600"
+                alignSelf="center"
+                size="2xl"
+                source={icons.avatar}></Avatar>
+
+              <View
+                style={{
+                  alignItems: 'center',
                 }}>
-                bienvenue{' '}
+                {/* avatar */}
                 <Text
                   style={{
-                    fontSize: 18,
+                    fontSize: 13 * scale,
+
                     fontWeight: 'bold',
-                    color: colors.primary,
+                    color: colors.secondary,
                   }}>
-                  zidane
+                  bienvenue{' '}
+                  <Text
+                    style={{
+                      fontSize: 14 * scale,
+                      fontWeight: 'bold',
+                      color: colors.primary,
+                    }}>
+                    zidane
+                  </Text>
                 </Text>
-              </Text>
-
-
-              {/* text avatar */}
-              <Text
-                style={{
-                  fontSize: 18,
-                  marginBottom: 20,
-                  color: colors.secondary,
-                }}>
-                Bienvenue dans votre controle du maison
-              </Text>
-
-              {/* div cards 1  */}
-              <View
-                style={{
-                  marginLeft: 20,
-                  fontSize: 18,
-                  marginBottom: 20,
-                  color: colors.secondary,
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  width: '80%',
-                  height: 150,
-                }}>
-                <Card
-                  elevation={4}
+                {/* text avatar */}
+                <Text
                   style={{
-                    flex: 1,
-                    flexGrow: 1,
-                    marginRight: 20,
-                    backgroundColor: colors.Quaternary,
-                    shadowColor: colors.white,
+                    fontSize: 10 * scale,
+                    marginBottom: 20 * scale,
+                    color: colors.secondary,
                   }}>
-                  <Card.Content
-                    style={{
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}>
-                    <Image
-                      source={icons.nuage}
-                      style={{
-                        height: 50,
-                        width: 50,
-                        tintColor: colors.primary,
-                        marginBottom: 6,
-                      }}
-                    />
+                  Bienvenue dans votre controle du maison
+                </Text>
 
-                    <Text
-                      style={{
-                        fontSize: 18,
-                        fontWeight: 'bold',
-                        color: colors.white,
-                        marginBottom: 8,
-                      }}>
-                      27 °c
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 15,
+                {/* div cards 1  */}
 
-                        color: colors.secondary,
-                      }}>
-                      Algerie
-                    </Text>
-                  </Card.Content>
-                </Card>
-
-                <Card
-                  elevation={4}
+                <View
                   style={{
-                    flex: 1,
-                    flexGrow: 1,
-                    marginRight: 20,
-                    backgroundColor: colors.Quaternary,
-                    shadowColor: colors.white,
-                  }}>
-                  <Card.Content
-                    style={{
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}>
-                    <Image
-                      source={icons.power}
-                      style={{
-                        height: 50,
-                        width: 50,
-                        tintColor: colors.primary,
-                        marginBottom: 6,
-                      }}
-                    />
-
-                    <Text
-                      style={{
-                        fontSize: 18,
-                        fontWeight: 'bold',
-                        color: colors.white,
-                        marginBottom: 8,
-                      }}>
-                      312
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 15,
-
-                        color: colors.secondary,
-                      }}>
-                      kwh
-                    </Text>
-                  </Card.Content>
-                </Card>
-
-                <Card
-                  elevation={4}
-                  style={{
-                    flex: 1,
-                    flexGrow: 1,
-                    marginRight: 20,
-                    backgroundColor: colors.Quaternary,
-                    shadowColor: colors.white,
-                  }}>
-                  <Card.Content
-                    style={{
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}>
-                    <Image
-                      source={icons.devices}
-                      style={{
-                        height: 50,
-                        width: 50,
-                        tintColor: colors.primary,
-                        marginBottom: 6,
-                      }}
-                    />
-
-                    <Text
-                      style={{
-                        fontSize: 18,
-                        fontWeight: 'bold',
-                        color: colors.white,
-                        marginBottom: 8,
-                      }}>
-                      13
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 15,
-
-                        color: colors.secondary,
-                      }}>
-                      Apparails
-                    </Text>
-                  </Card.Content>
-                </Card>
-              </View>
-
-
-              {/* div cards  2 */}
-              <View
-                style={{
-                  fontSize: 18,
-                  marginBottom: 20,
-                  marginLeft: 20,
-                  color: colors.secondary,
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  width: '80%',
-                  height: 150,
-                }}>
-                <Card
-                  elevation={4}
-                  style={{
-                    marginRight: 20,
-                    backgroundColor: colors.Quaternary,
-                    shadowColor: colors.white,
-                    width: '30%',
-                  }}>
-                  <Card.Content
-                    style={{
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}>
-                    <Image
-                      source={icons.temperature}
-                      style={{
-                        height: 50,
-                        width: 50,
-                        tintColor: colors.primary,
-                        marginBottom: 6,
-                      }}
-                    />
-
-                    <Text
-                      style={{
-                        fontSize: 18,
-                        fontWeight: 'bold',
-                        color: colors.white,
-                        marginBottom: 8,
-                      }}>
-                      25 °c
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 15,
-
-                        color: colors.secondary,
-                      }}>
-                      Celsius
-                    </Text>
-                  </Card.Content>
-                </Card>
-
-                <Card
-                  elevation={4}
-                  style={{
-                    marginRight: 20,
-                    backgroundColor: colors.Quaternary,
-                    shadowColor: colors.white,
-                    width: '30%',
-                  }}>
-                  <Card.Content
-                    style={{
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}>
-                    <Image
-                      source={icons.humidity}
-                      style={{
-                        height: 50,
-                        width: 50,
-                        tintColor: colors.primary,
-                        marginBottom: 6,
-                      }}
-                    />
-
-                    <Text
-                      style={{
-                        fontSize: 18,
-                        fontWeight: 'bold',
-                        color: colors.white,
-                        marginBottom: 8,
-                      }}>
-                      17 °k
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 15,
-
-                        color: colors.secondary,
-                      }}>
-                      Kelvin
-                    </Text>
-                  </Card.Content>
-                </Card>
-              </View>
-
-              {/* div cards  3 */}
-              <View
-                style={{
-                  fontSize: 18,
-                  marginBottom: 20,
-                  color: colors.secondary,
-
-                  width: '70%',
-                  height: 80,
-                }}>
-                <Swiper
-             dot={<View style={{backgroundColor: colors.secondary, width: 8, height: 8, borderRadius: 5, marginLeft: 3, marginRight: 3}} />}
-             activeDot={<View style={{backgroundColor: colors.primary, width: 8, height: 8, borderRadius: 4, marginLeft: 3, marginRight: 3}} />}
-                  autoplay={true}
-                  paginationStyle={{
-                    bottom: -5,
-                    left: 0,
-
-                    padding: 0,
-                  }}
-                  style={{
-                    height: 40,
+                    marginLeft: 20 * scale,
+                    fontSize: 18 * scale,
+                    marginBottom: 20 * scale,
+                    color: colors.secondary,
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    height: 150 * scale,
                   }}>
                   <Card
                     elevation={4}
                     style={{
-                      height: 60,
-                      marginRight: 10,
-                      marginLeft: 10,
+                      flex: 1,
+                      flexGrow: 1,
+                      marginRight: 10 * scale,
                       backgroundColor: colors.Quaternary,
                       shadowColor: colors.white,
-                      borderRadius: 30,
+                      height: 150 * scale,
                     }}>
                     <Card.Content
                       style={{
-                        flexDirection: 'row',
                         justifyContent: 'space-between',
                         alignItems: 'center',
                       }}>
                       <Image
-                        resizeMode="contain"
-                        source={icons.door1}
+                        source={icons.nuage}
                         style={{
-                          height: 24,
-                          width: 24,
+                          height: 50 * scale,
+                          width: 50 * scale,
                           tintColor: colors.primary,
+                          marginBottom: 6 * scale,
                         }}
                       />
 
-                      <Image
-                        source={icons.fenetre1}
+                      <Text
                         style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
+                          fontSize: 18 * scale,
+                          fontWeight: 'bold',
+                          color: colors.white,
+                          marginBottom: 8 * scale,
+                        }}>
+                        27 °c
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: 15 * scale,
 
-                      <Image
-                        source={icons.door2}
-                        style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
-                      <Image
-                        source={icons.outdoor1}
-                        style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
-                      <Image
-                        source={icons.fenetre2}
-                        style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                        }}
-                      />
+                          color: colors.secondary,
+                        }}>
+                        Algerie
+                      </Text>
                     </Card.Content>
                   </Card>
 
                   <Card
                     elevation={4}
                     style={{
-                      height: 60,
-                      marginRight: 10,
-                      marginLeft: 10,
+                      flex: 1,
+                      flexGrow: 1,
+                      marginRight: 10 * scale,
                       backgroundColor: colors.Quaternary,
                       shadowColor: colors.white,
-                      borderRadius: 30,
                     }}>
                     <Card.Content
                       style={{
-                        flexDirection: 'row',
                         justifyContent: 'space-between',
                         alignItems: 'center',
                       }}>
                       <Image
-                        resizeMode="contain"
-                        source={icons.door1}
+                        source={icons.power}
                         style={{
-                          height: 24,
-                          width: 24,
+                          height: 50 * scale,
+                          width: 50 * scale,
                           tintColor: colors.primary,
+                          marginBottom: 6 * scale,
                         }}
                       />
 
-                      <Image
-                        source={icons.door2}
+                      <Text
                         style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
+                          fontSize: 18 * scale,
+                          fontWeight: 'bold',
+                          color: colors.white,
+                          marginBottom: 8 * scale,
+                        }}>
+                        312
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: 15 * scale,
 
-                      <Image
-                        source={icons.outdoor2}
-                        style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
-                      <Image
-                        source={icons.outdoor1}
-                        style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
-                      <Image
-                        source={icons.fenetre3}
-                        style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                        }}
-                      />
+                          color: colors.secondary,
+                        }}>
+                        kwh
+                      </Text>
                     </Card.Content>
                   </Card>
-                </Swiper>
-              </View>
 
-              {/* div cards  4 */}
-              <View
-                style={{
-                  fontSize: 18,
-                  marginBottom: 20,
-                  color: colors.secondary,
-                  width: '40%',
-                  height: 80,
-                }}>
-                <Swiper
-dot={<View style={{backgroundColor: colors.secondary, width: 8, height: 8, borderRadius: 5, marginLeft: 3, marginRight: 3}} />}
-activeDot={<View style={{backgroundColor: colors.primary, width: 8, height: 8, borderRadius: 4, marginLeft: 3, marginRight: 3}} />}
+                  <Card
+                    elevation={4}
+                    style={{
+                      flex: 1,
+                      flexGrow: 1,
+                      marginRight: 10 * scale,
+                      backgroundColor: colors.Quaternary,
+                      shadowColor: colors.white,
+                    }}>
+                    <Card.Content
+                      style={{
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                      }}>
+                      <Image
+                        source={icons.devices}
+                        style={{
+                          height: 50 * scale,
+                          width: 50 * scale,
+                          tintColor: colors.primary,
+                          marginBottom: 6 * scale,
+                        }}
+                      />
 
-                  paginationStyle={{
-                    bottom: -5,
-                    left: 0,
+                      <Text
+                        style={{
+                          fontSize: 18 * scale,
+                          fontWeight: 'bold',
+                          color: colors.white,
+                          marginBottom: 8 * scale,
+                        }}>
+                        13
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: 13 * scale,
 
-                    padding: 0,
-                  }}
+                          color: colors.secondary,
+                        }}>
+                        Apparails
+                      </Text>
+                    </Card.Content>
+                  </Card>
+                </View>
+
+                {/* div cards  2 */}
+
+                <View
                   style={{
-                    height: 40,
+                    fontSize: 18 * scale,
+                    marginBottom: 20 * scale,
+                    marginLeft: 20 * scale,
+                    color: colors.secondary,
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+
+                    height: 150 * scale,
                   }}>
                   <Card
                     elevation={4}
                     style={{
-                      height: 60,
-                      marginRight: 10,
-                      marginLeft: 10,
+                      marginRight: 20 * scale,
                       backgroundColor: colors.Quaternary,
                       shadowColor: colors.white,
-                      borderRadius: 30,
+                      width: 140 * scale,
+                      height: 150 * scale,
                     }}>
                     <Card.Content
                       style={{
-                        flexDirection: 'row',
                         justifyContent: 'space-between',
                         alignItems: 'center',
                       }}>
                       <Image
-                        source={icons.mouvement1}
+                        source={icons.temperature}
                         style={{
-                          height: 24,
-                          width: 24,
+                          height: 50 * scale,
+                          width: 50 * scale,
                           tintColor: colors.primary,
+                          marginBottom: 6 * scale,
                         }}
                       />
 
-                      <Image
-                        source={icons.fire1}
+                      <Text
                         style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
+                          fontSize: 18 * scale,
+                          fontWeight: 'bold',
+                          color: colors.white,
+                          marginBottom: 8 * scale,
+                        }}>
+                        25 °c
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: 15 * scale,
 
-                      <Image
-                        source={icons.fire2}
-                        style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
+                          color: colors.secondary,
+                        }}>
+                        Celsius
+                      </Text>
                     </Card.Content>
                   </Card>
 
                   <Card
                     elevation={4}
                     style={{
-                      height: 60,
-                      marginRight: 10,
-                      marginLeft: 10,
+                      marginRight: 20 * scale,
                       backgroundColor: colors.Quaternary,
                       shadowColor: colors.white,
-                      borderRadius: 30,
+                      width: 140 * scale,
+                      height: 150 * scale,
                     }}>
                     <Card.Content
                       style={{
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
+                        justifyContent: 'center',
                         alignItems: 'center',
                       }}>
                       <Image
-                        source={icons.mouvement1}
+                        source={icons.humidity}
                         style={{
-                          height: 24,
-                          width: 24,
+                          height: 50 * scale,
+                          width: 50 * scale,
                           tintColor: colors.primary,
+                          marginBottom: 6 * scale,
                         }}
                       />
 
-                      <Image
-                        source={icons.fire1}
+                      <Text
                         style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
+                          fontSize: 18 * scale,
+                          fontWeight: 'bold',
+                          color: colors.white,
+                          marginBottom: 8 * scale,
+                        }}>
+                        17 °k
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: 15 * scale,
 
-                      <Image
-                        source={icons.fire2}
-                        style={{
-                          height: 24,
-                          width: 24,
-                          tintColor: colors.primary,
-                          marginBottom: 6,
-                        }}
-                      />
+                          color: colors.secondary,
+                        }}>
+                        Kelvin
+                      </Text>
                     </Card.Content>
                   </Card>
-                </Swiper>
-              </View>
+                </View>
 
-{/* div cards  now */}
+                {/* swiper cards  3 */}
+
+                <View
+                  style={{
+                    fontSize: 18 * scale,
+                    marginBottom: 20 * scale,
+                    color: colors.secondary,
+
+                    width: 350 * scale,
+                    height: 80 * scale,
+                  }}>
+                  <Swiper
+                    dot={
+                      <View
+                        style={{
+                          backgroundColor: colors.secondary,
+                          width: 6 * scale,
+                          height: 6 * scale,
+                          borderRadius: 5 * scale,
+                          marginLeft: 2 * scale,
+                          marginRight: 2 * scale,
+                        }}
+                      />
+                    }
+                    activeDot={
+                      <View
+                        style={{
+                          backgroundColor: colors.primary,
+                          width: 15 * scale,
+                          height:  6 * scale,
+                          borderRadius: 4 * scale,
+                          marginLeft: 3 * scale,
+                          marginRight: 3* scale,
+                        }}
+                      />
+                    }
+                    autoplay={true}
+                    paginationStyle={{
+                      bottom: -5 * scale,
+                      left: 0 * scale,
+
+                      padding: 0 * scale,
+                    }}
+                    style={{
+                      height: 40 * scale,
+                     
+                    }}>
+                    <Card
+                      elevation={4}
+                      style={{
+                        height: 75 * scale,
+                        marginRight: 10 * scale,
+                        marginLeft: 10 * scale,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                        borderRadius: 30 * scale,
+                        justifyContent: 'center',
+
+                      }}>
+                      <Card.Content
+                        style={{
+                          flexDirection: 'row',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          resizeMode="contain"
+                          source={icons.door1}
+                          style={{
+                            height: 24  * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                          }}
+                        />
+
+                        <Image
+                          source={icons.fenetre1}
+                          style={{
+                            height: 24 * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6 * scale,
+                          }}
+                        />
+
+                        <Image
+                          source={icons.door2}
+                          style={{
+                            height: 24 * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6 * scale,
+                          }}
+                        />
+                        <Image
+                          source={icons.outdoor1}
+                          style={{
+                            height: 24  * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6 * scale,
+                          }}
+                        />
+                        <Image
+                          source={icons.fenetre2}
+                          style={{
+                            height: 24 * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                          }}
+                        />
+                      </Card.Content>
+                    </Card>
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        height: 75  * scale,
+                        marginRight: 10 * scale,
+                        marginLeft: 10 * scale,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                        borderRadius: 30 * scale,
+                        justifyContent: 'center',
+
+                      }}>
+                      <Card.Content
+                        style={{
+                          flexDirection: 'row',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          resizeMode="contain"
+                          source={icons.door1}
+                          style={{
+                            height: 24 * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                          }}
+                        />
+
+                        <Image
+                          source={icons.door2}
+                          style={{
+                            height: 24 * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6 * scale,
+                          }}
+                        />
+
+                        <Image
+                          source={icons.outdoor2}
+                          style={{
+                            height: 24 * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6 * scale,
+                          }}
+                        />
+                        <Image
+                          source={icons.outdoor1}
+                          style={{
+                            height: 24 * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6 * scale,
+                          }}
+                        />
+                        <Image
+                          source={icons.fenetre3}
+                          style={{
+                            height: 24 * scale,
+                            width: 24 * scale,
+                            tintColor: colors.primary,
+                          }}
+                        />
+                      </Card.Content>
+                    </Card>
+
+                  </Swiper>
+                </View>
+
+                {/* swiper cards  4 */}
+
+                <View
+                  style={{
+                    fontSize: 18* scale,
+                    marginBottom: 20* scale,
+                    color: colors.secondary,
+                    width: 200 * scale,
+                    height: 80* scale,
+                  }}>
+                  <Swiper
+                    dot={
+                      <View
+                        style={{
+                          backgroundColor: colors.secondary,
+                          width: 6 * scale,
+                          height: 6* scale,
+                          borderRadius: 5* scale,
+                          marginLeft: 3* scale,
+                          marginRight: 3* scale,
+                        }}
+                      />
+                    }
+                    activeDot={
+                      <View
+                        style={{
+                          backgroundColor: colors.primary,
+                          width: 15* scale,
+                          height: 6* scale,
+                          borderRadius: 5,
+                          marginLeft: 3* scale,
+                          marginRight: 3* scale,
+                        }}
+                      />
+                    }
+                    paginationStyle={{
+                      bottom: -5 * scale,
+                      left: 0* scale,
+
+                      padding: 0* scale,
+                    }}
+                    style={{
+                      height: 40* scale,
+                    }}>
+                    <Card
+                      elevation={4}
+                      style={{
+                        height: 75* scale,
+                        marginRight: 10* scale,
+                        marginLeft: 10* scale,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                        borderRadius: 30* scale,
+                        justifyContent: 'center',
+
+                      }}>
+                      <Card.Content
+                        style={{
+                          flexDirection: 'row',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.mouvement1}
+                          style={{
+                            height: 24* scale,
+                            width: 24* scale,
+                            tintColor: colors.primary,
+                          }}
+                        />
+
+                        <Image
+                          source={icons.fire1}
+                          style={{
+                            height: 24* scale,
+                            width: 24* scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6* scale,
+                          }}
+                        />
+
+                        <Image
+                          source={icons.fire2}
+                          style={{
+                            height: 24* scale,
+                            width: 24* scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6* scale,
+                          }}
+                        />
+                      </Card.Content>
+                    </Card>
+
+                    <Card
+                      elevation={4}
+                      style={{
+                        height: 75* scale,
+                        marginRight: 10* scale,
+                        marginLeft: 10* scale,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                        justifyContent: 'center',
+                        
+                        borderRadius: 30* scale,
+                      }}>
+                      <Card.Content
+                        style={{
+                          flexDirection: 'row',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                        }}>
+                        <Image
+                          source={icons.mouvement1}
+                          style={{
+                            height: 24* scale,
+                            width: 24* scale,
+                            tintColor: colors.primary,
+                          }}
+                        />
+
+                        <Image
+                          source={icons.fire1}
+                          style={{
+                            height: 24* scale,
+                            width: 24* scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6* scale,
+                          }}
+                        />
+
+                        <Image
+                          source={icons.fire2}
+                          style={{
+                            height: 24* scale,
+                            width: 24* scale,
+                            tintColor: colors.primary,
+                            marginBottom: 6* scale,
+                          }}
+                        />
+                      </Card.Content>
+                    </Card>
+                  </Swiper>
+                </View>
+
+
+ {/* TEXT Controle du lumiere */}
+
+ <View
+        style={{
+          width: '85%',
+        }}>
+        <Text
+          style={{
+            fontSize: 15 * scale,
+            color: colors.secondary,
+            textAlign: 'left',
+          }}>
+          Controle du Lumiere
+        </Text>
+      </View>
+
+<ScrollCardsLumiere/>
+
+
+  {/* TEXT Controle du rideaux */}
+
+  <View
+        style={{
+            width: '85%',
+        }}>
+        <Text
+          style={{
+            fontSize: 15 * scale,
+            color: colors.secondary,
+            textAlign: 'left',
+          }}>
+          Controle des Rideeaux
+        </Text>
+      </View>
+
+
+<ScrollCardsRideaux/>
+
+
+
+
+
+
+{/* text cards  cameras */}
+             <View
+        style={{
+            width: '85%',
+            marginBottom:10 *scale,
+        }}>
+        <Text
+          style={{
+            fontSize: 15 * scale,
+            color: colors.secondary,
+            textAlign: 'left',
+          }}>
+          Controle des Cameras
+        </Text>
+      </View>
+
+                {/* div SWIPER  cameras */}
 <View
-                style={{
-                  
-                  fontSize: 18,
-                  marginBottom: 20,
-                 
-                
-               width: '100%',
-                  height: 150,
-                }}>
-         
+                  style={{
+                    fontSize: 18* scale,
+                    marginBottom: 20* scale,
+                    color: colors.secondary,
+                    width: 400 *scale,
+                    height: 250 *scale,
+                  }}>
+               
+                 <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{
+            paddingHorizontal: 0 * scale,
+            paddingVertical: 0 * scale,
+          }}> 
 
 
-         <ScrollView
-         style={{
 
 
-         }}
-  horizontal={true}
-  showsHorizontalScrollIndicator={false}
-  contentContainerStyle={{
-    paddingHorizontal: 10,
-    paddingVertical: 10,   
-      flexDirection: 'row',
-                  justifyContent: 'center',
-  }}
->
-                  <Card
+
+{videos.map((video, index) => (
+                <Card
+                  key={index}
                   elevation={4}
                   style={{
-                    flex: 1,
-                    flexGrow: 1,
-                    marginRight: 20,
-                    width:130,
-                    height:130,
+                    height: '100%',
+                    width: '100%',
+                    marginRight: 10,
+                    marginLeft: 10,
                     backgroundColor: colors.Quaternary,
                     shadowColor: colors.white,
-                  }}>
+                    borderRadius: 30,
+                  }}
+                >
                   <Card.Content
                     style={{
-                      justifyContent: 'center',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
                       alignItems: 'center',
-                    }}>
-                    <Image
-                      source={icons.home}
-                      style={{
-                        height: 24,
-                        width: 24,
-                        tintColor: colors.primary,
-                        marginBottom: 6,
-                      }}
-                    />
-
-                    <Text
-                      style={{
-                        fontSize: 10,
-                        color: colors.secondary,
-                        marginBottom: 8,
-                      }}>
-                      27 °c
-                    </Text>
-
-
-                    
+                    }}
+                  >
+                    <View style={styles.container}>
+                      <Video
+                        ref={videoRefs[index]}
+                        source={video.uri}
+                        style={styles.video}
+                        onLoadStart={() => console.log('Video loading started')}
+                        onLoad={() => setVideoLoaded(true)}
+                       
+                        resizeMode="cover"
+                        isLooping={true}
+                        isMuted={false}
+                        shouldPlay={true}
+                        onError={(error) => console.error('Video error:', error)}
+                      />
+                      {videoLoaded ? (
+                        <Text>Video loaded!</Text>
+                      ) : (
+                        <Text>Loading video...</Text>
+                      )}
+                    </View>
                   </Card.Content>
                 </Card>
+              ))}
+
+                 
+{/*                    
+                    <Card
+                      elevation={4}
+                      style={{
+                        height: '100%',
+                        marginRight: 10* scale,
+                        marginLeft: 10* scale,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                        borderRadius: 30* scale,
+                      }}>
+                      <Card.Content
+                        style={{
+                          flexDirection: 'row',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                        }}>
+
+<View style={styles.container}>
+      <Video
+        source={require('./video2.mp4')}
+        style={styles.video}
+       
+        onLoadStart={() => console.log('Video loading started')}
+        onLoad={() => setVideoLoaded(true)}
+        onError={(error) => console.error('Video error:', error)}
+      />
+      {videoLoaded ? (
+        <Text>Video loaded!</Text>
+      ) : (
+        <Text>Loading video...</Text>
+      )}
+    </View>
+
+                        </Card.Content>
+                    </Card>
+                    <Card
+                      elevation={4}
+                      style={{
+                        height: '100%',
+                        marginRight: 10* scale,
+                        marginLeft: 10* scale,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                        borderRadius: 30* scale,
+                      }}>
+                      <Card.Content
+                        style={{
+                          flexDirection: 'row',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                        }}>
+
+<View style={styles.container}>
+      <Video
+        source={require('./video3.mp4')}
+        style={styles.video}
+       
+        onLoadStart={() => console.log('Video loading started')}
+        onLoad={() => setVideoLoaded(true)}
+        onError={(error) => console.error('Video error:', error)}
+      />
+      {videoLoaded ? (
+        <Text>Video loaded!</Text>
+      ) : (
+        <Text>Loading video...</Text>
+      )}
+    </View>
 
 
 
 
+                        </Card.Content>
+                    </Card>
+                   
+                    <Card
+                      elevation={4}
+                      style={{
+                        height: '100%',
+                        marginRight: 10* scale,
+                        marginLeft: 10* scale,
+                        backgroundColor: colors.Quaternary,
+                        shadowColor: colors.white,
+                        borderRadius: 30* scale,
+                      }}>
+                      <Card.Content
+                        style={{
+                          flexDirection: 'row',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                        }}>
+
+
+<View style={styles.container}>
+      <Video
+        source={require('./video3.mp4')}
+        style={styles.video}
+       
+        onLoadStart={() => console.log('Video loading started')}
+        onLoad={() => setVideoLoaded(true)}
+        onError={(error) => console.error('Video error:', error)}
+      />
+      {videoLoaded ? (
+        <Text>Video loaded!</Text>
+      ) : (
+        <Text>Loading video...</Text>
+      )}
+    </View>
+
+                        </Card.Content>
+                    </Card>
+ */}
 
 
 
+                  </ScrollView>
+                </View>
+
+  
 
 
 
-
-
-
-
-
-
-
-                </ScrollView>
               </View>
 
 
@@ -683,13 +923,32 @@ activeDot={<View style={{backgroundColor: colors.primary, width: 8, height: 8, b
 
 
 
-            </View>
-          </NativeBaseProvider>
-        </View>
-
+            </NativeBaseProvider>
+          
+          </View>
         </ScrollView>
-        
       </View>
     </SafeAreaView>
   );
 }
+
+var styles = StyleSheet.create({
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+
+    container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  video: {
+    width: '100%',
+    height: '100%',
+  },
+});
+
