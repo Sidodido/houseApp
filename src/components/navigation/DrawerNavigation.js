@@ -1,11 +1,14 @@
 import React from 'react';
 import {createDrawerNavigator, DrawerItemList} from '@react-navigation/drawer';
 import {APropos, Services, Caracteristique, profile,Home, Product} from '../screens';
-
 import BottomNavigation from './BottomNavigation';
 import {View, Text, Image, Platform, Button} from 'react-native';
 import {colors, icons} from '../constants';
 import {SafeAreaView} from 'react-native-safe-area-context';
+
+
+
+
 
 const Drawer = createDrawerNavigator();
 const DrawerNavigation = () => {

@@ -22,8 +22,8 @@ const lineChartGazes = () => {
           color: colors.secondary,
           width: '90%',
           height: 250 * scale,
-          marginVertical: 8,
-          marginHorisontal: 8,
+          marginVertical: 8* scale,
+          marginHorisontal: 8* scale,
           justifyContent: 'center',
           alignItems: 'center',
         }}>
@@ -46,9 +46,9 @@ const lineChartGazes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Battrie :
                 </Text>
@@ -56,7 +56,7 @@ const lineChartGazes = () => {
                 <Text
                   style={{
                     color: colors.primary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
                     fontWeight: 'bold',
                   }}>
                   70 %
@@ -70,9 +70,9 @@ const lineChartGazes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Etat du capteur :
                 </Text>
@@ -80,7 +80,7 @@ const lineChartGazes = () => {
                 <Text
                   style={{
                     color: colors.primary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
                     fontWeight: 'bold',
                   }}>
                   Tres Bien
@@ -94,9 +94,9 @@ const lineChartGazes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Conssomation d’energie :
                 </Text>
@@ -104,7 +104,7 @@ const lineChartGazes = () => {
                 <Text
                   style={{
                     color: colors.primary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
                     fontWeight: 'bold',
                   }}>
                   200 wh
@@ -118,9 +118,9 @@ const lineChartGazes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Duree de fonctionnement :
                 </Text>
@@ -128,7 +128,7 @@ const lineChartGazes = () => {
                 <Text
                   style={{
                     color: colors.primary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
                     fontWeight: 'bold',
                   }}>
                   22 mois 4 Jours

@@ -15,7 +15,7 @@ import LineChartFlammes from './lineChartFlammes';
 import LineChartMouvements from './lineChartMouvements';
 
 const {width} = Dimensions.get('window');
-const scale = width / 420; // based on iphone 5s's width
+const scale = width / 420; 
 
 export default function Home() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -754,7 +754,7 @@ export default function Home() {
                             }
                             onLoad={() => setVideoLoaded(true)}
                             isLooping={true}
-                            isMuted={false}
+                            isMuted={true}
                             shouldPlay={true}
                             onError={error =>
                               console.error('Video error:', error)
@@ -791,7 +791,7 @@ export default function Home() {
                             }
                             onLoad={() => setVideoLoaded(true)}
                             isLooping={true}
-                            isMuted={false}
+                            isMuted={true}
                             shouldPlay={true}
                             onError={error =>
                               console.error('Video error:', error)

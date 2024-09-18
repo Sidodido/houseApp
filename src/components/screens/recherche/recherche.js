@@ -4,9 +4,16 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {View, Text, Image, ScrollView} from 'react-native';
 import { NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
+import { Searchbar } from 'react-native-paper';
+import Flammes from './statistiques/Flammes';
+import Mouvements from '../statistiques/Mouvements';
+import Gazes from '../statistiques/Gazes';
 
 
 export default function Recherche() {
+
+  const [searchQuery, setSearchQuery] = React.useState('');
+
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: colors.Quaternary}}>
     <View style={{flex: 1, backgroundColor: colors.Quaternary}}>
@@ -23,7 +30,39 @@ export default function Recherche() {
             left: 0,
           }}>
           <NativeBaseProvider>
-            {/* here the rest of code */}
+           
+
+            <Searchbar
+            style={{
+marginHorizontal:30,
+marginTop:60,
+
+
+            }}
+      placeholder="Search"
+      onChangeText={setSearchQuery}
+      value={searchQuery}
+      icon={icons.recherche}
+     clearIcon={icons.exit}
+    />
+
+
+<View style={{
+
+}}>
+
+
+
+
+<Gazes/>
+<Flammes/>
+<Mouvements/>
+
+
+                      
+</View>
+
+
           </NativeBaseProvider>
         </View>
       </ScrollView>

@@ -22,8 +22,8 @@ const lineChartFlammes = () => {
           color: colors.secondary,
           width: '90%',
           height: 250 * scale,
-          marginVertical: 8,
-          marginHorisontal: 8,
+          marginVertical: 8* scale,
+          marginHorisontal: 8* scale,
           justifyContent: 'center',
           alignItems: 'center',
         }}>
@@ -46,9 +46,9 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Battrie :
                 </Text>
@@ -56,7 +56,7 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.primary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
                     fontWeight: 'bold',
                   }}>
                   70 %
@@ -70,9 +70,9 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Etat du capteur :
                 </Text>
@@ -80,7 +80,7 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.primary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
                     fontWeight: 'bold',
                   }}>
                   Tres Bien
@@ -94,9 +94,9 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Conssomation d’energie :
                 </Text>
@@ -104,7 +104,7 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.primary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
                     fontWeight: 'bold',
                   }}>
                   200 wh
@@ -118,9 +118,9 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Duree de fonctionnement :
                 </Text>
@@ -128,7 +128,7 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.primary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
                     fontWeight: 'bold',
                   }}>
                   22 mois 4 Jours
@@ -139,9 +139,9 @@ const lineChartFlammes = () => {
                 <Text
                   style={{
                     color: colors.Quaternary,
-                    fontSize: 15,
+                    fontSize: 15* scale,
 
-                    marginRight: 5,
+                    marginRight: 5* scale,
                   }}>
                   Notifications du capteur :
                 </Text>
@@ -193,7 +193,7 @@ const lineChartFlammes = () => {
           }}>
           <LineChart
             data={{
-              labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
               datasets: [
                 {
                   data: [
@@ -213,9 +213,9 @@ const lineChartFlammes = () => {
             yAxisSuffix="k"
             yAxisInterval={1} // optional, defaults to 1
             chartConfig={{
-              backgroundColor: colors.Quaternary,
-              backgroundGradientFrom: colors.Quaternary,
-              backgroundGradientTo: colors.secondary,
+              backgroundColor: colors.secondary,
+              backgroundGradientFrom: colors.secondary,
+              backgroundGradientTo: colors.Quaternary,
               decimalPlaces: 2 * scale, // optional, defaults to 2dp
               color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
               labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
@@ -225,7 +225,7 @@ const lineChartFlammes = () => {
               propsForDots: {
                 r: '6',
                 strokeWidth: '2',
-                stroke: colors.Quaternary,
+                stroke: colors.secondary,
               },
             }}
             bezier
