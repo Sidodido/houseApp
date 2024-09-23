@@ -6,6 +6,8 @@ import {View, Text, Image, ScrollView} from 'react-native';
 import { NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 import LineChartGazes from '../home/lineChartGazes';
+import {Dimensions, StyleSheet} from 'react-native';
+
 const {width} = Dimensions.get('window');
 const scale = width / 420; 
 
@@ -45,7 +47,7 @@ marginTop:-10* scale,
                         style={{
                           fontSize: 18* scale ,
                           fontWeight: 'bold',
-                          color: colors.white,
+                          color: colors.secondary,
                           marginBottom: 8* scale ,
                         }}>
                         Capteur de gaz 1
@@ -79,7 +81,7 @@ marginTop:-30* scale,
                         style={{
                           fontSize: 18* scale ,
                           fontWeight: 'bold',
-                          color: colors.white,
+                          color: colors.secondary,
                           marginBottom: 8* scale ,
                         }}>
                         Capteur de gaz 2
@@ -113,7 +115,7 @@ marginTop:-30* scale,
                         style={{
                           fontSize: 18* scale ,
                           fontWeight: 'bold',
-                          color: colors.white,
+                          color: colors.secondary,
                           marginBottom: 8 * scale,
                         }}>
                         Capteur de gaz 3
@@ -149,7 +151,7 @@ marginTop:-30* scale,
                         style={{
                           fontSize: 18 * scale,
                           fontWeight: 'bold',
-                          color: colors.white,
+                          color: colors.secondary,
                           marginBottom: 8* scale,
                          
 
@@ -184,7 +186,7 @@ marginTop:-20* scale,
                         style={{
                           fontSize: 18* scale ,
                           fontWeight: 'bold',
-                          color: colors.white,
+                          color: colors.secondary,
                           marginBottom: 8* scale ,
                         }}>
                         Capteur de gaz 5

@@ -5,6 +5,8 @@ import {View, Text, Image, ScrollView} from 'react-native';
 import {NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 import LineChartFlammes from '../home/lineChartFlammes';
+import {Dimensions, StyleSheet} from 'react-native';
+
 const {width} = Dimensions.get('window');
 const scale = width / 420; 
 
@@ -41,7 +43,7 @@ const Flammes = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
             marginBottom: 8* scale,
           }}>
           Capteur de Flamme 1
@@ -73,7 +75,7 @@ const Flammes = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
             marginBottom: 8* scale,
           }}>
           Capteur de Flamme 2
@@ -105,7 +107,7 @@ const Flammes = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
             marginBottom: 8* scale,
           }}>
           Capteur de Flamme 4
@@ -137,7 +139,7 @@ const Flammes = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
             marginBottom: 8* scale,
           }}>
           Capteur de Flamme 5

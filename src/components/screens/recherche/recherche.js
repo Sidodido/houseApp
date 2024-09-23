@@ -8,6 +8,8 @@ import { Searchbar } from 'react-native-paper';
 import Flammes from '../statistiques/Flammes';
 import Mouvements from '../statistiques/Mouvements';
 import Gazes from '../statistiques/Gazes';
+import {Dimensions, StyleSheet} from 'react-native';
+
 const {width} = Dimensions.get('window');
 const scale = width / 420; 
 

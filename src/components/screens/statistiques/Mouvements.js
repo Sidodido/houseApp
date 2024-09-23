@@ -5,6 +5,7 @@ import {View, Text, Image, ScrollView} from 'react-native';
 import {NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 import LineChartMouvements from '../home/lineChartMouvements';
+import {Dimensions, StyleSheet} from 'react-native';
 
 const {width} = Dimensions.get('window');
 const scale = width / 420; 
@@ -37,7 +38,7 @@ const Mouvements = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
           }}>
           Capteur de Mouvement 1
         </Text>
@@ -66,7 +67,7 @@ const Mouvements = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
           }}>
           Capteur de Mouvement 2
         </Text>
@@ -94,7 +95,7 @@ const Mouvements = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
           }}>
           Capteur de Mouvement 3
         </Text>
@@ -122,7 +123,7 @@ const Mouvements = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
           }}>
           Capteur de Mouvement 4
         </Text>
@@ -150,7 +151,7 @@ const Mouvements = () => {
           style={{
             fontSize: 18* scale,
             fontWeight: 'bold',
-            color: colors.white,
+            color: colors.secondary,
           }}>
           Capteur de Mouvement 5
         </Text>

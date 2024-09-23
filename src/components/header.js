@@ -217,20 +217,23 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
   },
   exitContainer: {
-    marginLeft: 20* scale,
+    
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: -30* scale,
+    marginRight: 0* scale,
   },
   icon: {
     height: 24* scale,
     width: 24* scale,
     tintColor: colors.Quaternary,
+    
   },
   exit: {
     height: 24* scale,
     width: 24* scale,
     tintColor: colors.tertiary,
+    marginLeft:-30,
+    marginRight:20
   },
   deleteButton: {
     position: 'absolute',

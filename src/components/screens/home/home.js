@@ -36,7 +36,7 @@ export default function Home() {
           <View
             style={{
               width: '100%', // adjust the width to your needs
-              height: 10000, // adjust the height to your needs
+              height: 2500, // adjust the height to your needs
               backgroundColor: colors.tertiary,
               borderRadius: 150 * scale, // this will create a semi-circle
               position: 'fixed',
@@ -863,7 +863,12 @@ export default function Home() {
                 {/* div scroll  caracteristiques gaz */}
 
 
-<Text>Gazes</Text>
+<Text style={{
+color:colors.white,
+fontWeight:'bold',
+fontSize: 17 * scale,
+
+}}>Gazes</Text>
                 <ScrollView
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
@@ -900,7 +905,12 @@ gap:20
 
 
 
-                    <Text>Flammes</Text>
+                    <Text  style={{
+color:colors.white,
+fontWeight:'bold',
+fontSize: 17 * scale,
+
+}}>Flammes</Text>
                 <ScrollView
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
@@ -940,7 +950,12 @@ gap:20
 
 
 
-                    <Text>Mouvements</Text>
+                    <Text  style={{
+color:colors.white,
+fontWeight:'bold',
+fontSize: 17 * scale,
+
+}}>Mouvements</Text>
                 <ScrollView
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}

@@ -7,6 +7,8 @@ import {colors, icons, images} from '../../constants';
 import Flammes from './Flammes';
 import Mouvements from './Mouvements';
 import Gazes from './Gazes';
+import {Dimensions, StyleSheet} from 'react-native';
+
 const {width} = Dimensions.get('window');
 const scale = width / 420; 
 
@@ -19,7 +21,7 @@ export default function Statistiques() {
         <View
           style={{
             width: '100%', // adjust the width to your needs
-            height: 10000, // adjust the height to your needs
+            height: 4600, // adjust the height to your needs
             backgroundColor: colors.tertiary,
             borderRadius: 150* scale, // this will create a semi-circle
             position: 'fixed',
@@ -40,7 +42,7 @@ style={{
   borderRadius:20* scale,
   marginTop:40* scale,
   marginBottom:40* scale,
-  flexDirection:'row'* scale,
+  flexDirection:'row',
   justifyContent:'space-between',
   alignItems:'center',
   padding:15* scale,

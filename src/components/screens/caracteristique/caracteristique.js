@@ -4,6 +4,8 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {View, Text, Image, ScrollView} from 'react-native';
 import { NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
+import {Dimensions, StyleSheet} from 'react-native';
+
 const {width} = Dimensions.get('window');
 const scale = width / 420; 
 
