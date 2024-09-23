@@ -21,13 +21,34 @@ export default function Parametres() {
               width: '100%', // adjust the width to your needs
               height: 10000, // adjust the height to your needs
               backgroundColor: colors.tertiary,
-              borderRadius: 150* scale, // this will create a semi-circle
+              borderRadius: 70* scale, // this will create a semi-circle
               position: 'fixed',
               top: 0,
               left: 0,
             }}>
             <NativeBaseProvider>
               {/* here the rest of code */}
+
+
+<View
+
+style={{
+ 
+  height: 7000, // adjust the height to your needs
+  backgroundColor: colors.Quaternary,
+  borderRadius: 70* scale, // this will create a semi-circle
+  position: 'fixed',
+marginHorizontal:15,
+marginTop:15
+}}
+
+>
+
+
+</View>
+
+
+
             </NativeBaseProvider>
           </View>
         </ScrollView>
