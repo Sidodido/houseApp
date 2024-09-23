@@ -6,33 +6,36 @@ import {NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 import LineChartMouvements from '../home/lineChartMouvements';
 
+const {width} = Dimensions.get('window');
+const scale = width / 420; 
+
 const Mouvements = () => {
   return (
     <View
       style={{
         flexDirection: 'column',
-        gap: 1,
+        gap: 1* scale,
       }}>
       <View
         style={{
           flexDirection: 'row',
-          marginLeft: 40,
+          marginLeft: 40* scale,
           alignItems: 'center',
         }}>
         <Image
           source={icons.door1}
           style={{
-            height: 27,
-            width: 27,
+            height: 27* scale,
+            width: 27* scale,
             tintColor: colors.primary,
 
-            marginRight: 10,
+            marginRight: 10* scale,
           }}
         />
 
         <Text
           style={{
-            fontSize: 18,
+            fontSize: 18* scale,
             fontWeight: 'bold',
             color: colors.white,
           }}>
@@ -45,23 +48,23 @@ const Mouvements = () => {
       <View
         style={{
           flexDirection: 'row',
-          marginLeft: 40,
+          marginLeft: 40* scale,
           alignItems: 'center',
         }}>
         <Image
           source={icons.door2}
           style={{
-            height: 27,
-            width: 27,
+            height: 27* scale,
+            width: 27* scale,
             tintColor: colors.primary,
 
-            marginRight: 10,
+            marginRight: 10* scale,
           }}
         />
 
         <Text
           style={{
-            fontSize: 18,
+            fontSize: 18* scale,
             fontWeight: 'bold',
             color: colors.white,
           }}>
@@ -73,23 +76,23 @@ const Mouvements = () => {
       <View
         style={{
           flexDirection: 'row',
-          marginLeft: 40,
+          marginLeft: 40* scale,
           alignItems: 'center',
         }}>
         <Image
           source={icons.fenetre3}
           style={{
-            height: 27,
-            width: 27,
+            height: 27* scale,
+            width: 27* scale,
             tintColor: colors.primary,
 
-            marginRight: 10,
+            marginRight: 10* scale,
           }}
         />
 
         <Text
           style={{
-            fontSize: 18,
+            fontSize: 18* scale,
             fontWeight: 'bold',
             color: colors.white,
           }}>
@@ -101,23 +104,23 @@ const Mouvements = () => {
       <View
         style={{
           flexDirection: 'row',
-          marginLeft: 40,
+          marginLeft: 40* scale,
           alignItems: 'center',
         }}>
         <Image
           source={icons.fenetre1}
           style={{
-            height: 27,
-            width: 27,
+            height: 27* scale,
+            width: 27* scale,
             tintColor: colors.primary,
 
-            marginRight: 10,
+            marginRight: 10* scale,
           }}
         />
 
         <Text
           style={{
-            fontSize: 18,
+            fontSize: 18* scale,
             fontWeight: 'bold',
             color: colors.white,
           }}>
@@ -129,23 +132,23 @@ const Mouvements = () => {
       <View
         style={{
           flexDirection: 'row',
-          marginLeft: 40,
+          marginLeft: 40* scale,
           alignItems: 'center',
         }}>
         <Image
           source={icons.fenetre2}
           style={{
-            height: 27,
-            width: 27,
+            height: 27* scale,
+            width: 27* scale,
             tintColor: colors.primary,
 
-            marginRight: 10,
+            marginRight: 10* scale,
           }}
         />
 
         <Text
           style={{
-            fontSize: 18,
+            fontSize: 18* scale,
             fontWeight: 'bold',
             color: colors.white,
           }}>

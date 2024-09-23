@@ -6,7 +6,8 @@ import {View, Text, Image, ScrollView} from 'react-native';
 import { NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 import LineChartGazes from '../home/lineChartGazes';
-
+const {width} = Dimensions.get('window');
+const scale = width / 420; 
 
 const Gazes = () => {
   return (
@@ -14,7 +15,7 @@ const Gazes = () => {
 
             <View style={{
 flexDirection:'column',
-gap:20,
+gap:20* scale,
 
 }}>
 
@@ -22,30 +23,30 @@ gap:20,
 
 <View style={{
         flexDirection: 'row',
-        marginLeft:40,
+        marginLeft:40* scale,
         alignItems:"center",
-marginBottom:-20,
-marginTop:-10,
+marginBottom:-20* scale,
+marginTop:-10* scale,
 
       }}>
         
       <Image
                         source={icons.Home2}
                         style={{
-                          height: 27 ,
-                          width: 27 ,
+                          height: 27* scale ,
+                          width: 27* scale ,
                           tintColor: colors.primary,
-                          marginBottom: 6 ,
-                          marginRight:10,
+                          marginBottom: 6* scale ,
+                          marginRight:10* scale,
                         }}
                       />
 
 <Text
                         style={{
-                          fontSize: 18 ,
+                          fontSize: 18* scale ,
                           fontWeight: 'bold',
                           color: colors.white,
-                          marginBottom: 8 ,
+                          marginBottom: 8* scale ,
                         }}>
                         Capteur de gaz 1
                       </Text>
@@ -55,31 +56,31 @@ marginTop:-10,
 <LineChartGazes/>
 <View style={{
         flexDirection: 'row',
-        marginLeft:40,
+        marginLeft:40* scale,
         alignItems:"center",
-marginBottom:-20,
-marginTop:-30,
+marginBottom:-20* scale,
+marginTop:-30* scale,
 
       }}>
         
       <Image
                         source={icons.cuisine1}
                         style={{
-                          height: 27 ,
-                          width: 27 ,
+                          height: 27* scale ,
+                          width: 27 * scale,
                           tintColor: colors.primary,
-                          marginBottom: 6 ,
-                          marginRight:10,
+                          marginBottom: 6* scale ,
+                          marginRight:10* scale,
 
                         }}
                       />
 
 <Text
                         style={{
-                          fontSize: 18 ,
+                          fontSize: 18* scale ,
                           fontWeight: 'bold',
                           color: colors.white,
-                          marginBottom: 8 ,
+                          marginBottom: 8* scale ,
                         }}>
                         Capteur de gaz 2
                       </Text>
@@ -89,31 +90,31 @@ marginTop:-30,
 
 <View style={{
         flexDirection: 'row',
-        marginLeft:40,
+        marginLeft:40* scale,
         alignItems:"center",
-marginBottom:-20,
-marginTop:-30,
+marginBottom:-20* scale,
+marginTop:-30* scale,
 
       }}>
         
       <Image
                         source={icons.door2}
                         style={{
-                          height: 27 ,
-                          width: 27 ,
+                          height: 27* scale ,
+                          width: 27* scale ,
                           tintColor: colors.primary,
-                          marginBottom: 6 ,
-                          marginRight:10,
+                          marginBottom: 6* scale ,
+                          marginRight:10* scale,
 
                         }}
                       />
 
 <Text
                         style={{
-                          fontSize: 18 ,
+                          fontSize: 18* scale ,
                           fontWeight: 'bold',
                           color: colors.white,
-                          marginBottom: 8 ,
+                          marginBottom: 8 * scale,
                         }}>
                         Capteur de gaz 3
                       </Text>
@@ -125,31 +126,31 @@ marginTop:-30,
 
 <View style={{
         flexDirection: 'row',
-        marginLeft:40,
+        marginLeft:40* scale,
         alignItems:"center",
-marginBottom:-20,
-marginTop:-30,
+marginBottom:-20* scale,
+marginTop:-30* scale,
 
       }}>
         
       <Image
                         source={icons.chambre2}
                         style={{
-                          height: 27 ,
-                          width: 27 ,
+                          height: 27 * scale,
+                          width: 27 * scale,
                           tintColor: colors.primary,
-                          marginBottom: 6 ,
-                          marginRight:10,
+                          marginBottom: 6 * scale,
+                          marginRight:10* scale,
 
                         }}
                       />
 
 <Text
                         style={{
-                          fontSize: 18 ,
+                          fontSize: 18 * scale,
                           fontWeight: 'bold',
                           color: colors.white,
-                          marginBottom: 8 ,
+                          marginBottom: 8* scale,
                          
 
                         }}>
@@ -161,30 +162,30 @@ marginTop:-30,
 
 <View style={{
         flexDirection: 'row',
-        marginLeft:40,
+        marginLeft:40* scale,
         alignItems:"center",
-marginBottom:-20,
-marginTop:-20,
+marginBottom:-20* scale,
+marginTop:-20* scale,
 
       }}>
         
       <Image
                         source={icons.Home2}
                         style={{
-                          height: 27 ,
-                          width: 27 ,
+                          height: 27* scale ,
+                          width: 27 * scale,
                           tintColor: colors.primary,
-                          marginBottom: 6 ,
-                          marginRight:10,
+                          marginBottom: 6 * scale,
+                          marginRight:10* scale,
                         }}
                       />
 
 <Text
                         style={{
-                          fontSize: 18 ,
+                          fontSize: 18* scale ,
                           fontWeight: 'bold',
                           color: colors.white,
-                          marginBottom: 8 ,
+                          marginBottom: 8* scale ,
                         }}>
                         Capteur de gaz 5
                       </Text>

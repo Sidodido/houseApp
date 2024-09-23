@@ -8,7 +8,8 @@ import { Searchbar } from 'react-native-paper';
 import Flammes from '../statistiques/Flammes';
 import Mouvements from '../statistiques/Mouvements';
 import Gazes from '../statistiques/Gazes';
-
+const {width} = Dimensions.get('window');
+const scale = width / 420; 
 
 export default function Recherche() {
 
@@ -24,7 +25,7 @@ export default function Recherche() {
             width: '100%', // adjust the width to your needs
             height: 10000, // adjust the height to your needs
             backgroundColor: colors.tertiary,
-            borderRadius: 150, // this will create a semi-circle
+            borderRadius: 150 * scale, // this will create a semi-circle
             position: 'fixed',
             top: 0,
             left: 0,

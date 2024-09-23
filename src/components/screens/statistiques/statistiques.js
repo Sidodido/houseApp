@@ -7,7 +7,8 @@ import {colors, icons, images} from '../../constants';
 import Flammes from './Flammes';
 import Mouvements from './Mouvements';
 import Gazes from './Gazes';
-
+const {width} = Dimensions.get('window');
+const scale = width / 420; 
 
 export default function Statistiques() {
   return (
@@ -20,7 +21,7 @@ export default function Statistiques() {
             width: '100%', // adjust the width to your needs
             height: 10000, // adjust the height to your needs
             backgroundColor: colors.tertiary,
-            borderRadius: 150, // this will create a semi-circle
+            borderRadius: 150* scale, // this will create a semi-circle
             position: 'fixed',
             
             top: 0,
@@ -34,15 +35,15 @@ export default function Statistiques() {
 <View
 style={{
   backgroundColor:colors.secondary,
-  height:50,
-  marginHorizontal:50,
-  borderRadius:20,
-  marginTop:40,
-  marginBottom:40,
-  flexDirection:'row',
+  height:50* scale,
+  marginHorizontal:50* scale,
+  borderRadius:20* scale,
+  marginTop:40* scale,
+  marginBottom:40* scale,
+  flexDirection:'row'* scale,
   justifyContent:'space-between',
   alignItems:'center',
-  padding:15,
+  padding:15* scale,
   fontWeight:'bold'
   }}
 >
@@ -99,7 +100,7 @@ color:colors.white,
 </View>
 
 <View style={{
-marginRight: -40
+marginRight: -40* scale
 
 }}>
 

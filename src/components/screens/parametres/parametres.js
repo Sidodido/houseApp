@@ -6,7 +6,8 @@ import {View, Text, Image, ScrollView} from 'react-native';
 import { NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 
-
+const {width} = Dimensions.get('window');
+const scale = width / 420; 
 
 export default function Parametres() {
   return (
@@ -19,7 +20,7 @@ export default function Parametres() {
               width: '100%', // adjust the width to your needs
               height: 10000, // adjust the height to your needs
               backgroundColor: colors.tertiary,
-              borderRadius: 150, // this will create a semi-circle
+              borderRadius: 150* scale, // this will create a semi-circle
               position: 'fixed',
               top: 0,
               left: 0,

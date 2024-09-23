@@ -17,10 +17,10 @@ const modal = () => {
   return (
    
           <Modal  visible={visible} onDismiss={hideModal} contentContainerStyle={{
-        padding: 40,
-        margin:40,
+        padding: 40* scale,
+        margin:40* scale,
         backgroundColor:colors.white,
-        borderRadius:20
+        borderRadius:20* scale
 
       }}>
               <TextInput
@@ -39,7 +39,7 @@ const modal = () => {
         height:50,
         backgroundColor:'#9DB3BE',
         opacity:0.6,
-        borderRadius:5,
+        borderRadius:5* scale,
         color:textColor
       }}
 

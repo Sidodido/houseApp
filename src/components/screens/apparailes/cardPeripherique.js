@@ -62,7 +62,7 @@ const cardPeripherique = () => {
 
 <View    style={{
                   
-                  marginBottom:20
+                  marginBottom:20* scale
                 }}>
 
             
@@ -171,7 +171,7 @@ const cardPeripherique = () => {
 <View  style={{justifyContent:'center'}}>
 
 
-              <Button style={{width:170,
+              <Button style={{width:170* scale,
               backgroundColor:colors.primary,
               marginHorizontal:'auto',
               borderRadius:10,
@@ -220,10 +220,10 @@ const cardPeripherique = () => {
                       </Card.Content>
              </Card>
       <Modal  visible={visible} onDismiss={hideModal} contentContainerStyle={{
-          padding: 40,
-          margin:40,
+          padding: 40* scale,
+          margin:40* scale,
           backgroundColor:colors.white,
-          borderRadius:20
+          borderRadius:20* scale
   
         }}>
                 <TextInput

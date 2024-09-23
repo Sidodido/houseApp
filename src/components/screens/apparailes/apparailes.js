@@ -48,7 +48,7 @@ export default function Apparailes() {
 
               <View
                 style={{
-                  marginTop: 60,
+                  marginTop: 60* scale,
                 }}></View>
 
               <Card
@@ -61,19 +61,19 @@ export default function Apparailes() {
                   shadowColor: colors.white,
                   borderRadius: 30 * scale,
                   justifyContent: 'center',
-                  marginTop: 30,
+                  marginTop: 30* scale,
                 }}>
                 <Card.Content
                   style={{
                     justifyContent: 'space-between',
-                    marginLeftdcerfvr: 20,
+                    marginLeftdcerfvr: 20* scale,
                   }}>
                   <Text
                     style={{
                       color: colors.primary,
                       fontSize: 23 * scale,
                       textAlign: 'center',
-                      marginBottom: 20,
+                      marginBottom: 20* scale,
                       fontWeight: 'bold',
                     }}>
                     peripherique N#
@@ -81,7 +81,7 @@ export default function Apparailes() {
 
                   <View
                     style={{
-                      marginBottom: 20,
+                      marginBottom: 20* scale,
                     }}>
                     <View
                       style={{
@@ -179,10 +179,10 @@ export default function Apparailes() {
                   <View style={{justifyContent: 'center'}}>
                     <Button
                       style={{
-                        width: 170,
+                        width: 170* scale,
                         backgroundColor: colors.primary,
                         marginHorizontal: 'auto',
-                        borderRadius: 10,
+                        borderRadius: 10* scale,
 
                         color: colors.Quaternary,
                       }}
@@ -216,10 +216,10 @@ export default function Apparailes() {
           visible={visible}
           onDismiss={hideModal}
           contentContainerStyle={{
-            padding: 40,
-            margin: 40,
+            padding: 40* scale,
+            margin: 40* scale,
             backgroundColor: colors.white,
-            borderRadius: 20,
+            borderRadius: 20* scale,
           }}>
            
 
@@ -239,8 +239,8 @@ export default function Apparailes() {
               height: 30 * scale,
               width: 30 * scale,
               tintColor: colors.Quaternary,
-              padding: -20,
-              margin: -20,
+              padding: -20* scale,
+              margin: -20* scale,
             
             }}
           />
@@ -253,9 +253,9 @@ export default function Apparailes() {
             style={{
               textAlign: 'center',
               fontWeight: 'bold',
-              fontSize: 20,
+              fontSize: 20* scale,
               color: colors.Quaternary,
-              marginBottom: 20,
+              marginBottom: 20* scale,
             }}>
             Nouveau Peripherique
           </Text>
@@ -282,12 +282,12 @@ export default function Apparailes() {
               setTextColor(colors.primary);
             }}
             style={{
-              height: 50,
+              height: 50* scale,
               backgroundColor: '#9DB3BE',
               opacity: 0.6,
-              borderRadius: 5,
+              borderRadius: 5* scale,
               color: colors.primary,
-              marginBottom: 10,
+              marginBottom: 10* scale,
             }}
           />
 
@@ -309,12 +309,12 @@ export default function Apparailes() {
               
             }
             style={{
-              height: 50,
+              height: 50* scale,
               backgroundColor: '#9DB3BE',
               opacity: 0.6,
-              borderRadius: 5,
+              borderRadius: 5* scale,
               color: textColor,
-              marginBottom: 10,
+              marginBottom: 10* scale,
             }}
           />
 
@@ -339,12 +339,12 @@ export default function Apparailes() {
               
             }
             style={{
-              height: 50,
+              height: 50* scale,
               backgroundColor: '#9DB3BE',
               opacity: 0.6,
-              borderRadius: 5,
+              borderRadius: 5* scale,
               color: textColor,
-              marginBottom: 10,
+              marginBottom: 10* scale,
             }}
           />
           <TextInput
@@ -366,23 +366,23 @@ export default function Apparailes() {
             onChangeText={text => setMacAddress(text)
             }
             style={{
-              height: 50,
+              height: 50* scale,
               backgroundColor: '#9DB3BE',
               opacity: 0.6,
-              borderRadius: 5,
+              borderRadius: 5* scale,
               color: textColor,
-              marginBottom: 10,
+              marginBottom: 10* scale,
             }}
           />
 
           <View style={{justifyContent: 'center'}}>
             <Button
               style={{
-                width: 170,
-                marginTop: 20,
+                width: 170* scale,
+                marginTop: 20* scale,
                 backgroundColor: colors.primary,
                 marginHorizontal: 'auto',
-                borderRadius: 10,
+                borderRadius: 10* scale,
 
                 color: colors.Quaternary,
               }}
