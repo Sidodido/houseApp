@@ -33,6 +33,9 @@ const power = require('../../assets/pageHomeAssets/power.png');
 const salon1 = require('../../assets/pageHomeAssets/salon1.png');
 const temperature = require('../../assets/pageHomeAssets/temperature.png');
 const notification = require('../../assets/bottomBarIcon/notification.png');
+const plus = require('../../assets/pageHomeAssets/plus.png');
+const left = require('../../assets/pageHomeAssets/left.png');
+const unlock = require('../../assets/pageHomeAssets/unlock.png');
 
 
 
@@ -75,4 +78,7 @@ export default {
   menu,
   notification,
   exit,
+  left,
+  plus,
+  unlock,
 };
