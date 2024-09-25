@@ -128,7 +128,7 @@ export default function Parametres() {
           <View
             style={{
               width: '100%', // adjust the width to your needs
-              height: 800, // adjust the height to your needs
+              height: 800* scale, // adjust the height to your needs
               backgroundColor: colors.tertiary,
               borderRadius: 60 * scale, // this will create a semi-circle
               position: 'fixed',
@@ -151,17 +151,17 @@ export default function Parametres() {
                   style={{
                     flexDirection: 'row',
                     alignItems: 'center',
-                    marginHorizontal: 35,
+                    marginHorizontal: 35 * scale,
                     marginTop: 25 * scale,
                     borderBottomWidth: 1, // add a bottom border width of 1
                     borderBottomColor: colors.secondary,
-                    height: 80,
+                    height: 80 * scale,
                   }}>
                   <Avatar
                     style={{
                       height: 60 * scale,
                       width: 60 * scale,
-                      marginRight: 20,
+                      marginRight: 20* scale,
                     }}
                     bg="purple.600"
                     alignSelf="start"
@@ -185,8 +185,8 @@ export default function Parametres() {
                 <Text
                   style={{
                     fontSize: 16 * scale,
-                    marginLeft: 35,
-                    marginTop: 20,
+                    marginLeft: 35 * scale,
+                    marginTop: 20 * scale,
                     color: colors.secondary,
                   }}>
                   Parametres du compte
@@ -195,9 +195,9 @@ export default function Parametres() {
                 <View
                   style={{
                     flexDirection: 'column',
-                    marginHorizontal: 40,
-                    marginTop: 10,
-                    borderBottomWidth: 1,
+                    marginHorizontal: 40 * scale,
+                    marginTop: 10 * scale,
+                    borderBottomWidth: 1 * scale,
                     borderBottomColor: colors.secondary,
                   }}>
                   <TouchableOpacity onPress={showModal}>
@@ -205,13 +205,13 @@ export default function Parametres() {
                       style={{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        marginTop: 20,
+                        marginTop: 20 * scale,
                         alignItems: 'center',
                       }}>
                       <Text
                         style={{
                           fontSize: 16 * scale,
-                          marginHorizontal: 10,
+                          marginHorizontal: 10 * scale,
                           color: colors.white,
                         }}>
                         Modifier le profile
@@ -232,13 +232,13 @@ export default function Parametres() {
                       style={{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        marginTop: 20,
+                        marginTop: 20 * scale,
                         alignItems: 'center',
                       }}>
                       <Text
                         style={{
                           fontSize: 16 * scale,
-                          marginHorizontal: 10,
+                          marginHorizontal: 10 * scale,
                           color: colors.white,
                         }}>
                         Changer le mot de passe
@@ -260,13 +260,13 @@ export default function Parametres() {
                       style={{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        marginTop: 20,
+                        marginTop: 20 * scale,
                         alignItems: 'center',
                       }}>
                       <Text
                         style={{
                           fontSize: 16 * scale,
-                          marginHorizontal: 10,
+                          marginHorizontal: 10 * scale,
                           color: colors.white,
                         }}>
                         Peripheriques bloques
@@ -287,13 +287,13 @@ export default function Parametres() {
                     style={{
                       flexDirection: 'row',
                       justifyContent: 'space-between',
-                      marginTop: 20,
+                      marginTop: 20 * scale,
                       alignItems: 'center',
                     }}>
                     <Text
                       style={{
                         fontSize: 16 * scale,
-                        marginHorizontal: 10,
+                        marginHorizontal: 10 * scale,
                         color: colors.white,
                       }}>
                       Notification
@@ -324,14 +324,14 @@ export default function Parametres() {
                     style={{
                       flexDirection: 'row',
                       justifyContent: 'space-between',
-                      marginTop: 20,
+                      marginTop: 20 * scale,
                       alignItems: 'center',
-                      marginBottom: 30,
+                      marginBottom: 30 * scale,
                     }}>
                     <Text
                       style={{
                         fontSize: 16 * scale,
-                        marginHorizontal: 10,
+                        marginHorizontal: 10 * scale,
                         color: colors.white,
                       }}>
                       Mode sombre
@@ -362,8 +362,8 @@ export default function Parametres() {
                 <Text
                   style={{
                     fontSize: 16 * scale,
-                    marginLeft: 35,
-                    marginTop: 20,
+                    marginLeft: 35 * scale,
+                    marginTop: 20 * scale,
                     color: colors.secondary,
                   }}>
                   Plus
@@ -372,21 +372,21 @@ export default function Parametres() {
                 <View
                   style={{
                     flexDirection: 'column',
-                    marginHorizontal: 40,
-                    marginTop: 10,
+                    marginHorizontal: 40 * scale,
+                    marginTop: 10 * scale,
                   }}>
                   <TouchableOpacity onPress={showFourthModal}>
                     <View
                       style={{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        marginTop: 20,
+                        marginTop: 20 * scale,
                         alignItems: 'center',
                       }}>
                       <Text
                         style={{
                           fontSize: 16 * scale,
-                          marginHorizontal: 10,
+                          marginHorizontal: 10 * scale,
                           color: colors.white,
                         }}>
                         À propos de nous
@@ -408,13 +408,13 @@ export default function Parametres() {
                       style={{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        marginTop: 20,
+                        marginTop: 20 * scale,
                         alignItems: 'center',
                       }}>
                       <Text
                         style={{
                           fontSize: 16 * scale,
-                          marginHorizontal: 10,
+                          marginHorizontal: 10 * scale,
                           color: colors.white,
                         }}>
                         Politique de confidentialité
@@ -436,14 +436,14 @@ export default function Parametres() {
                       style={{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        marginTop: 20,
+                        marginTop: 20 * scale,
                         alignItems: 'center',
-                        marginBottom: 30,
+                        marginBottom: 30 * scale,
                       }}>
                       <Text
                         style={{
                           fontSize: 16 * scale,
-                          marginHorizontal: 10,
+                          marginHorizontal: 10 * scale,
                           color: colors.white,
                         }}>
                         Termes et conditions
@@ -516,8 +516,8 @@ export default function Parametres() {
               style={{
                 height: 150 * scale,
                 width: 150 * scale,
-                borderRadius: 10,
-                marginBottom: 20,
+                borderRadius: 10* scale,
+                marginBottom: 20* scale,
                 flexDirection: 'row',
               }}
             />
@@ -526,11 +526,11 @@ export default function Parametres() {
               style={{
                 justifyContent: 'center',
                 backgroundColor: colors.primary,
-                width: 80,
-                padding: 10,
+                width: 80* scale,
+                padding: 10* scale,
                 justifyContent: 'center',
-                height: 80,
-                borderRadius: 10,
+                height: 80* scale,
+                borderRadius: 10* scale,
               }}>
               <Text
                 style={{
@@ -553,7 +553,7 @@ export default function Parametres() {
                 <Text
                   style={{
                     fontWeight: 'normal',
-                    fontSize: 12,
+                    fontSize: 12* scale,
                   }}>
                   Zidane Sidahmed
                 </Text>
@@ -582,7 +582,7 @@ export default function Parametres() {
                 <Text
                   style={{
                     fontWeight: 'normal',
-                    fontSize: 12,
+                    fontSize: 12* scale,
                   }}>
                   Zidanesidahmed18@gmail.com
                 </Text>
@@ -607,11 +607,13 @@ export default function Parametres() {
             <Button
               style={{
                 width: 170 * scale,
+                height:40* scale,
                 marginTop: 20 * scale,
                 backgroundColor: colors.primary,
                 marginHorizontal: 'auto',
                 borderRadius: 10 * scale,
-
+alignItems:'center',
+padding:5* scale,
                 color: colors.Quaternary,
               }}
               mode="contained"
@@ -619,7 +621,7 @@ export default function Parametres() {
               <Text
                 style={{
                   color: colors.Quaternary,
-                  fontSize: 17 * scale,
+                  fontSize: 14 * scale,
                   fontWeight: 'bold',
                 }}>
                 Confirmer
@@ -645,7 +647,7 @@ export default function Parametres() {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              marginBottom: 20,
+              marginBottom: 20* scale,
             }}>
             <Text
               style={{
@@ -741,14 +743,16 @@ export default function Parametres() {
           </View>
 
           <View style={{justifyContent: 'center'}}>
-            <Button
+          <Button
               style={{
                 width: 170 * scale,
+                height:40* scale,
                 marginTop: 20 * scale,
                 backgroundColor: colors.primary,
                 marginHorizontal: 'auto',
                 borderRadius: 10 * scale,
-
+alignItems:'center',
+padding:5* scale,
                 color: colors.Quaternary,
               }}
               mode="contained"
@@ -756,7 +760,7 @@ export default function Parametres() {
               <Text
                 style={{
                   color: colors.Quaternary,
-                  fontSize: 17 * scale,
+                  fontSize: 14 * scale,
                   fontWeight: 'bold',
                 }}>
                 Confirmer
@@ -781,7 +785,7 @@ export default function Parametres() {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              marginBottom: 20,
+              marginBottom: 20* scale,
             }}>
             <Text
               style={{
@@ -812,13 +816,13 @@ export default function Parametres() {
             style={{
               borderBottomColor: colors.Quaternary,
               borderBottomWidth: 1 * scale,
-              marginBottom: 20,
+              marginBottom: 20* scale,
             }}>
             <Text
               style={{
                 color: colors.Quaternary,
                 fontWeight: 'normal',
-                marginBottom: 10,
+                marginBottom: 10* scale,
               }}>
               Bloque Nouveau peripherique
             </Text>
@@ -837,7 +841,7 @@ export default function Parametres() {
                   setTextColor(colors.primary);
                 }}
                 style={{
-                  width: 170,
+                  width: 170* scale,
                   height: 50 * scale,
                   backgroundColor: '#9DB3BE',
                   opacity: 0.6,
@@ -851,11 +855,11 @@ export default function Parametres() {
                 style={{
                   justifyContent: 'center',
                   backgroundColor: colors.primary,
-                  width: 70,
-                  padding: 10,
+                  width: 70* scale,
+                  padding: 10* scale,
                   justifyContent: 'center',
-                  height: 57,
-                  borderRadius: 5,
+                  height: 53* scale,
+                  borderRadius: 5* scale,
                 }}>
                 <Text
                   style={{
@@ -882,7 +886,7 @@ export default function Parametres() {
                   style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between',
-                    
+
                     marginBottom: 5 * scale,
                   }}>
                   <View style={{flex: 1, flexGrow: 1, marginRight: 20 * scale}}>
@@ -938,7 +942,7 @@ export default function Parametres() {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              marginBottom: 20,
+              marginBottom: 20* scale,
             }}>
             <Text
               style={{
@@ -1058,7 +1062,7 @@ export default function Parametres() {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              marginBottom: 20,
+              marginBottom: 20 * scale,
             }}>
             <Text
               style={{

@@ -37,13 +37,13 @@ const cardPeripherique = () => {
                         shadowColor: colors.white,
                         borderRadius: 30 * scale,
                         justifyContent: 'center',
-                        marginTop:30
+                        marginTop:30* scale,
                       }}>
                       <Card.Content
                         style={{
                           
                           justifyContent: 'space-between',
-                          marginLeft:20
+                          marginLeft:20* scale,
                         }}>
                        
 
@@ -52,7 +52,7 @@ const cardPeripherique = () => {
                     color: colors.primary,
                     fontSize: 23* scale,
                     textAlign:'center',
-                    marginBottom:20,
+                    marginBottom:20* scale,
                     fontWeight:"bold"
 
                   }}>
