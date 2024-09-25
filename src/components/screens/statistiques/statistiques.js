@@ -23,7 +23,7 @@ export default function Statistiques() {
               width: '100%', // adjust the width to your needs
               height: 4600* scale, // adjust the height to your needs
               backgroundColor: colors.tertiary,
-              borderRadius: 150 * scale, // this will create a semi-circle
+              borderRadius: 70 * scale, // this will create a semi-circle
               position: 'fixed',
 
               top: 0,
@@ -46,6 +46,8 @@ export default function Statistiques() {
                   padding: 15 * scale,
                   fontWeight: 'bold',
                 }}>
+
+                  
                 {/* hna chof kifeh ra7 dir le filtre dyalkk
       zid focus to text 
       zid licon et titre du chaque graphe

@@ -30,13 +30,13 @@ export default function SignIn({navigation}) {
             }}>
             <Image
               source={images.logo2}
-              style={{width: 150, height: 100, marginBottom: 50}}
+              style={{width: 150*scale, height: 100*scale, marginBottom: 50*scale}}
             />
 
-            <View style={{width: 350, marginBottom: 30}}>
+            <View style={{width: 350*scale, marginBottom: 30*scale}}>
               <Text
                 style={{
-                  fontSize: 20,
+                  fontSize: 20*scale,
                   color: colors.primary,
                   textAlign: 'left',
                   fontWeight: 'bold',
@@ -45,20 +45,20 @@ export default function SignIn({navigation}) {
               </Text>
             </View>
 
-            <View style={{width: '100%', borderRadius: 10, marginBottom: 10}}>
+            <View style={{width: '100%', borderRadius: 10*scale, marginBottom: 10*scale}}>
               <Input
                 style={{
-                  height: 50,
-                  fontSize: 17,
+                  height: 50*scale,
+                  fontSize: 17*scale,
                   color: colors.secondary,
                 }}
                 InputLeftElement={
                   <Image
                     source={icons.aPropos}
                     style={{
-                      marginLeft: 10,
-                      width: 20,
-                      height: 20,
+                      marginLeft: 10*scale,
+                      width: 20*scale,
+                      height: 20*scale,
                       tintColor: colors.secondary,
                     }}
                   />
@@ -66,54 +66,54 @@ export default function SignIn({navigation}) {
                 placeholder="Nom d'utilisateur"
               />
             </View>
-            <View style={{width: '100%', borderRadius: 10, marginBottom: 10}}>
+            <View style={{width: '100%', borderRadius: 10*scale, marginBottom: 10*scale}}>
               <Input
                 style={{
-                  height: 50,
-                  fontSize: 17,
+                  height: 50*scale,
+                  fontSize: 17*scale,
                   color: colors.secondary,
                 }}
                 InputLeftElement={
                   <Image
                     source={icons.email}
-                    style={{marginLeft: 10, width: 20, height: 20}}
+                    style={{marginLeft: 10*scale, width: 20*scale, height: 20*scale}}
                   />
                 }
                 placeholder="Adresse email"
               />
             </View>
 
-            <View style={{width: '100%', borderRadius: 10, marginBottom: 10}}>
+            <View style={{width: '100%', borderRadius: 10*scale, marginBottom: 10*scale}}>
               <Input
                 style={{
-                  height: 50,
-                  fontSize: 17,
+                  height: 50*scale,
+                  fontSize: 17*scale,
                   color: colors.secondary,
                 }}
                 InputLeftElement={
                   <Image
                     source={icons.phone}
-                    style={{marginLeft: 10, width: 20, height: 20}}
+                    style={{marginLeft: 10*scale, width: 20*scale, height: 20*scale}}
                   />
                 }
                 placeholder="Numero du telephone"
               />
             </View>
 
-            <View style={{width: '100%', borderRadius: 10, marginBottom: 10}}>
+            <View style={{width: '100%', borderRadius: 10*scale, marginBottom: 10*scale}}>
               <Input
                 style={{
-                  height: 50,
-                  fontSize: 17,
+                  height: 50*scale,
+                  fontSize: 17*scale,
                   color: colors.secondary,
-                  marginLeft: 10,
+                  marginLeft: 10*scale,
                 }}
                 type={show ? 'text' : 'password'}
                 InputRightElement={
                   <Pressable onPress={() => setShow(!show)}>
                     <Image
                       source={icons.password}
-                      style={{marginRight: 10, width: 25, height: 20}}
+                      style={{marginRight: 10*scale, width: 25*scale, height: 20*scale}}
                     />
                   </Pressable>
                 }
@@ -121,20 +121,20 @@ export default function SignIn({navigation}) {
               />
             </View>
 
-            <View style={{width: '100%', borderRadius: 10, marginBottom: 30}}>
+            <View style={{width: '100%', borderRadius: 10*scale, marginBottom: 30*scale}}>
               <Input
                 style={{
-                  height: 50,
-                  fontSize: 17,
+                  height: 50*scale,
+                  fontSize: 17*scale,
                   color: colors.secondary,
-                  marginLeft: 10,
+                  marginLeft: 10*scale,
                 }}
                 type={show ? 'text' : 'password'}
                 InputRightElement={
                   <Pressable onPress={() => setShow(!show)}>
                     <Image
                       source={icons.password}
-                      style={{marginRight: 10, width: 25, height: 15}}
+                      style={{marginRight: 10*scale, width: 25*scale, height: 15*scale}}
                     />
                   </Pressable>
                 }
@@ -147,8 +147,8 @@ export default function SignIn({navigation}) {
                 width: 170 * scale,
                 backgroundColor: colors.primary,
                 marginHorizontal: 'auto',
-                borderRadius: 10,
-                marginBottom: 20,
+                borderRadius: 10*scale,
+                marginBottom: 20*scale,
                 color: colors.Quaternary,
               }}
               mode="contained"
@@ -166,28 +166,28 @@ export default function SignIn({navigation}) {
             <View
               style={{
                 flexDirection: 'row',
-                marginBottom: 20,
+                marginBottom: 20*scale,
               }}>
               <Text
                 style={{
-                  fontWeight: 300,
+                  fontWeight: 300*scale,
                   color: colors.secondary,
                 }}>
                 ______________
               </Text>
               <Text
                 style={{
-                  fontSize: 17,
+                  fontSize: 17*scale,
                   color: colors.secondary,
                   textAlign: 'center',
-                  marginLeft: 20,
-                  marginRight: 20,
+                  marginLeft: 20*scale,
+                  marginRight: 20*scale,
                 }}>
                 Se connecter avec
               </Text>
               <Text
                 style={{
-                  fontWeight: 300,
+                  fontWeight: 300*scale,
                   color: colors.secondary,
                 }}>
                 ______________
@@ -196,15 +196,15 @@ export default function SignIn({navigation}) {
 
             <View style={{flexDirection: 'row', marginBottom: 40}}>
               <Image
-                style={{marginRight: 15, marginLeft: 20, width: 60, height: 60}}
+                style={{marginRight: 15*scale, marginLeft: 20*scale, width: 60*scale, height: 60*scale}}
                 source={icons.google}
               />
               <Image
-                style={{marginRight: 15, width: 60, height: 60}}
+                style={{marginRight: 15*scale, width: 60*scale, height: 60*scale}}
                 source={icons.facebook}
               />
               <Image
-                style={{marginRight: 15, width: 60, height: 60}}
+                style={{marginRight: 15*scale, width: 60*scale, height: 60*scale}}
                 source={icons.x}
               />
             </View>
@@ -215,7 +215,7 @@ export default function SignIn({navigation}) {
               }}>
               <Text
                 style={{
-                  fontSize: 17,
+                  fontSize: 17*scale,
                   color: colors.secondary,
                   textAlign: 'center',
                 }}>
@@ -225,10 +225,10 @@ export default function SignIn({navigation}) {
               <TouchableOpacity onPress={() => navigation.navigate('LogIn')}>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 17*scale,
                     color: colors.primary,
                     textAlign: 'center',
-                    marginLeft: 10,
+                    marginLeft: 10*scale,
                   }}>
                   se connecter
                 </Text>

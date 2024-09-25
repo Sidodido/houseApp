@@ -30,13 +30,13 @@ export default function OTP({navigation}) {
             }}>
             <Image
               source={images.logo2}
-              style={{width: 280, height: 200, marginBottom: 30}}
+              style={{width: 280*scale, height: 200*scale, marginBottom: 30*scale}}
             />
 
-            <View style={{width: 350, marginBottom: 30}}>
+            <View style={{width: 350*scale, marginBottom: 30*scale}}>
               <Text
                 style={{
-                  fontSize: 25,
+                  fontSize: 25*scale,
                   color: colors.primary,
                   textAlign: 'center',
                   fontWeight: 'bold',
@@ -52,66 +52,66 @@ export default function OTP({navigation}) {
 <View style={{flexDirection:'row',marginBottom:10}}>
 <View style={{borderColor:colors.primary,
 borderWidth:1,
-width:40,
-height:40,
-borderRadius:10,
-marginRight:10}}>
+width:40*scale,
+height:40*scale,
+borderRadius:10*scale,
+marginRight:10*scale}}>
 
 
 </View>
 
 <View style={{borderColor:colors.primary,
-borderWidth:1,
-width:40,
-height:40,
-borderRadius:10,
-marginRight:10}}>
+borderWidth:1*scale,
+width:40*scale,
+height:40*scale,
+borderRadius:10*scale,
+marginRight:10*scale}}>
 
 
 </View>
 
 <View style={{borderColor:colors.primary,
-borderWidth:1,
-width:40,
-height:40,
-borderRadius:10,
-marginRight:10}}>
+borderWidth:1*scale,
+width:40*scale,
+height:40*scale,
+borderRadius:10*scale,
+marginRight:10*scale}}>
 
 
 </View>
 
 <View style={{borderColor:colors.primary,
-borderWidth:1,
-width:40,
-height:40,
-borderRadius:10,
-marginRight:10}}>
+borderWidth:1*scale,
+width:40*scale,
+height:40*scale,
+borderRadius:10*scale,
+marginRight:10*scale}}>
 
 
 </View>
 
 <View style={{borderColor:colors.primary,
-borderWidth:1,
-width:40,
-height:40,
-borderRadius:10,
-marginRight:10}}>
+borderWidth:1*scale,
+width:40*scale,
+height:40*scale,
+borderRadius:10*scale,
+marginRight:10*scale}}>
 
 
 </View>
 
 <View style={{borderColor:colors.primary,
-borderWidth:1,
-width:40,
-height:40,
-borderRadius:10,
-marginRight:10}}>
+borderWidth:1*scale,
+width:40*scale,
+height:40*scale,
+borderRadius:10*scale,
+marginRight:10*scale}}>
 
 
 </View>
 
 </View>
-<View style={{width:'80%',marginBottom:20}}>
+<View style={{width:'80%',marginBottom:20*scale}}>
 
 <Text style={{textAlign:'right',color:colors.primary}}>
   0.59s
@@ -127,17 +127,17 @@ marginRight:10}}>
               <View
               style={{
                 flexDirection: 'row',
-                marginBottom: 30,
-                marginHorizontal:20
+                marginBottom: 30*scale,
+                marginHorizontal:20*scale
               }}>
              
               <Text
                 style={{
-                  fontSize: 18,
+                  fontSize: 18*scale,
                   color: colors.secondary,
                   textAlign: 'center',
-                  marginLeft: 20,
-                  marginRight: 20,
+                  marginLeft: 20*scale,
+                  marginRight: 20*scale,
                 }}>
                 Nous envoyons un OTP sur votre numéro enregistré
               </Text>
@@ -150,8 +150,8 @@ marginRight:10}}>
                 width: 130 * scale,
                 backgroundColor: colors.primary,
                 marginHorizontal: 'auto',
-                borderRadius: 10,
-                marginBottom: 70,
+                borderRadius: 10*scale,
+                marginBottom: 70*scale,
                 color: colors.Quaternary,
               }}
               mode="contained"
@@ -174,7 +174,7 @@ marginRight:10}}>
               }}>
               <Text
                 style={{
-                  fontSize: 17,
+                  fontSize: 17*scale,
                   color: colors.secondary,
                   textAlign: 'center',
                 }}>
@@ -184,7 +184,7 @@ marginRight:10}}>
               <TouchableOpacity onPress={() => navigation.navigate('OTP')}>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 17*scale,
                     color: colors.primary,
                     textAlign: 'center',
                     marginLeft: 10,

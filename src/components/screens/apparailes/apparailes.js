@@ -38,7 +38,7 @@ export default function Apparailes() {
               width: '100%', // adjust the width to your needs
               height: 10000 * scale, // adjust the height to your needs
               backgroundColor: colors.tertiary,
-              borderRadius: 150 * scale, // this will create a semi-circle
+              borderRadius: 70 * scale, // this will create a semi-circle
               position: 'fixed',
               top: 0 * scale,
               left: 0 * scale,
@@ -48,7 +48,7 @@ export default function Apparailes() {
 
               <View
                 style={{
-                  marginTop: 60* scale,
+                  marginTop: 30* scale,
                 }}></View>
 
               <Card
