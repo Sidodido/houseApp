@@ -37,13 +37,25 @@ export default function Welcome2( {navigation}) {
               source={images.logo2}
               style={{width: 250, height: 180, marginBottom: 50}}
             />
+
+            <View style={{width:240,marginBottom:30}}>
+
+
+            
+            <Text style={{
+              fontSize:17,
+              color:colors.secondary,
+              textAlign:'center'
+            }}>
+            Rendre votre journée plus intelligente
+            </Text></View>
             <Button
               style={{
                 width: 170 * scale,
                 backgroundColor: colors.primary,
                 marginHorizontal: 'auto',
                 borderRadius: 10,
-
+marginBottom:70,
                 color: colors.Quaternary,
               }}
               mode="contained"
@@ -58,6 +70,36 @@ export default function Welcome2( {navigation}) {
                 S'inscrire
               </Text>
             </Button>
+
+<View style={{
+  flexDirection:'row'
+}}>
+<Text style={{
+              fontSize:17,
+              color:colors.secondary,
+              textAlign:'center'
+            }}>
+            j'ai déjà un compte 
+        
+            </Text>  
+
+
+            <TouchableOpacity     onPress ={() => navigation.navigate('LogIn')}>
+
+
+         
+              <Text style={{
+              fontSize:17,
+              color:colors.primary,
+              textAlign:'center',
+              marginLeft:10
+            }}>
+            se connecter
+            </Text>
+   </TouchableOpacity>
+
+</View>
+            
           </View>
         </NativeBaseProvider>
       </View>

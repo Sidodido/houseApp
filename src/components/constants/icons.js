@@ -36,6 +36,12 @@ const notification = require('../../assets/bottomBarIcon/notification.png');
 const plus = require('../../assets/pageHomeAssets/plus.png');
 const left = require('../../assets/pageHomeAssets/left.png');
 const unlock = require('../../assets/pageHomeAssets/unlock.png');
+const email = require('../../assets/pageHomeAssets/email.png');
+const phone = require('../../assets/pageHomeAssets/phone.png');
+const password = require('../../assets/pageHomeAssets/password.png');
+const facebook = require('../../assets/pageHomeAssets/facebook.png');
+const x = require('../../assets/pageHomeAssets/x.png');
+const google = require('../../assets/pageHomeAssets/google.png');
 
 
 
@@ -81,4 +87,8 @@ export default {
   left,
   plus,
   unlock,
+  email,
+  password,
+  phone,
+  facebook,google,x,
 };
