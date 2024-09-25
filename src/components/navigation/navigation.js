@@ -10,6 +10,11 @@ import {
   Parametres,
   Statistiques,
   Recherche,
+  Welcome2,
+  Welcome,
+  SignIn,
+  OTP,
+  LogIn,
 } from '../screens';
 const Stack = createNativeStackNavigator();
 
@@ -18,10 +23,15 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="Main">
+        initialRouteName="Welcome">
           
       
         <Stack.Screen name="Main" component={DrawerNavigation} />
+        <Stack.Screen name="Welcome2" component={Welcome2} />
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="OTP" component={OTP} />
+        <Stack.Screen name="LogIn" component={LogIn} />
         
       </Stack.Navigator>
     </NavigationContainer>
