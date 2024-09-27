@@ -21,7 +21,7 @@ const APropos = () => {
             width: '100%', // adjust the width to your needs
             height: 1000, // adjust the height to your needs
             backgroundColor: colors.tertiary,
-            borderRadiusTop: 50* scale, // this will create a semi-circle
+            borderRadius: 50* scale, // this will create a semi-circle
             position: 'fixed',
             top: 0,
             left: 0,

@@ -36,10 +36,10 @@ const Caracteristique = () => {
         <ScrollView>
           <View
             style={{
-              width: '100%', // adjust the width to your needs
-              height: 1300, // adjust the height to your needs
+              width: '100%', 
+              height: 1300, 
               backgroundColor: colors.tertiary,
-              borderRadius: 70 * scale, // this will create a semi-circle
+              borderRadius: 70 * scale, 
               position: 'fixed',
               top: 0,
               left: 0,

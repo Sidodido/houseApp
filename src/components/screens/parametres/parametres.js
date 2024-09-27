@@ -129,7 +129,7 @@ export default function Parametres() {
               width: '100%', // adjust the width to your needs
               height: 800* scale, // adjust the height to your needs
               backgroundColor: colors.tertiary,
-              borderRadiusTop: 60 * scale, // this will create a semi-circle
+              borderRadius: 60 * scale, // this will create a semi-circle
               position: 'fixed',
               top: 0,
               left: 0,
