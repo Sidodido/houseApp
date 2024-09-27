@@ -152,7 +152,7 @@ export default function SignIn({navigation}) {
                 color: colors.Quaternary,
               }}
               mode="contained"
-              onPress={() => navigation.navigate('LogIn')}>
+              onPress={() => navigation.navigate('OTP')}>
               <Text
                 style={{
                   color: colors.Quaternary,

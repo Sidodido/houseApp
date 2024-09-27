@@ -8,9 +8,8 @@ import {Dimensions, StyleSheet} from 'react-native';
 import {Avatar} from 'native-base';
 import {Modal} from 'react-native-paper';
 import {TextInput} from 'react-native-paper';
-import {Button, Card, Switch} from 'react-native-paper';
+import {Button, Switch} from 'react-native-paper';
 import {useDisclose} from 'native-base';
-import {Box} from 'native-base';
 
 const {width} = Dimensions.get('window');
 const scale = width / 420;
@@ -130,7 +129,7 @@ export default function Parametres() {
               width: '100%', // adjust the width to your needs
               height: 800* scale, // adjust the height to your needs
               backgroundColor: colors.tertiary,
-              borderRadius: 60 * scale, // this will create a semi-circle
+              borderRadiusTop: 60 * scale, // this will create a semi-circle
               position: 'fixed',
               top: 0,
               left: 0,
@@ -460,6 +459,9 @@ export default function Parametres() {
                     </View>
                   </TouchableOpacity>
                 </View>
+
+
+                
               </View>
             </NativeBaseProvider>
           </View>

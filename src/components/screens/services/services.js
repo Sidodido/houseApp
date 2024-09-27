@@ -21,7 +21,7 @@ const Services = () => {
               width: '100%', // adjust the width to your needs
               height: 1500* scale, // adjust the height to your needs
               backgroundColor: colors.tertiary,
-              borderRadius: 70 * scale, // this will create a semi-circle
+              borderRadiusTop: 70 * scale, // this will create a semi-circle
               position: 'fixed',
               top: 0,
               left: 0,
