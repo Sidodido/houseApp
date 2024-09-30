@@ -30,13 +30,17 @@ export default function LogIn({navigation}) {
             }}>
             <Image
               source={images.logo2}
-              style={{width: 200*scale, height: 150*scale, marginBottom: 50*scale}}
+              style={{
+                width: 200 * scale,
+                height: 150 * scale,
+                marginBottom: 50 * scale,
+              }}
             />
 
-            <View style={{width: 350*scale, marginBottom: 30*scale}}>
+            <View style={{width: 350 * scale, marginBottom: 30 * scale}}>
               <Text
                 style={{
-                  fontSize: 20*scale,
+                  fontSize: 20 * scale,
                   color: colors.primary,
                   textAlign: 'left',
                   fontWeight: 'bold',
@@ -45,37 +49,55 @@ export default function LogIn({navigation}) {
               </Text>
             </View>
 
-            <View style={{width: '100%', borderRadius: 10*scale, marginBottom: 10*scale}}>
+            <View
+              style={{
+                width: '100%',
+                borderRadius: 10 * scale,
+                marginBottom: 10 * scale,
+              }}>
               <Input
                 style={{
-                  height: 50*scale,
-                  fontSize: 17*scale,
+                  height: 50 * scale,
+                  fontSize: 17 * scale,
                   color: colors.secondary,
                 }}
                 InputLeftElement={
                   <Image
                     source={icons.email}
-                    style={{marginLeft: 10*scale, width: 15*scale, height: 15*scale}}
+                    style={{
+                      marginLeft: 10 * scale,
+                      width: 15 * scale,
+                      height: 15 * scale,
+                    }}
                   />
                 }
                 placeholder="Adresse email"
               />
             </View>
 
-            <View style={{width: '100%', borderRadius: 10*scale, marginBottom: 30*scale}}>
+            <View
+              style={{
+                width: '100%',
+                borderRadius: 10 * scale,
+                marginBottom: 30 * scale,
+              }}>
               <Input
                 style={{
-                  height: 50*scale,
-                  fontSize: 17*scale,
+                  height: 50 * scale,
+                  fontSize: 17 * scale,
                   color: colors.secondary,
-                  marginLeft: 10*scale,
+                  marginLeft: 10 * scale,
                 }}
                 type={show ? 'text' : 'Mot de passe'}
                 InputRightElement={
                   <Pressable onPress={() => setShow(!show)}>
                     <Image
                       source={icons.password}
-                      style={{marginRight: 10*scale, width: 25*scale, height: 25*scale}}
+                      style={{
+                        marginRight: 10 * scale,
+                        width: 25 * scale,
+                        height: 25 * scale,
+                      }}
                     />
                   </Pressable>
                 }
@@ -88,8 +110,8 @@ export default function LogIn({navigation}) {
                 width: 170 * scale,
                 backgroundColor: colors.primary,
                 marginHorizontal: 'auto',
-                borderRadius: 10*scale,
-                marginBottom: 20*scale,
+                borderRadius: 10 * scale,
+                marginBottom: 20 * scale,
                 color: colors.Quaternary,
               }}
               mode="contained"
@@ -107,45 +129,58 @@ export default function LogIn({navigation}) {
             <View
               style={{
                 flexDirection: 'row',
-                marginBottom: 20*scale,
+                marginBottom: 20 * scale,
               }}>
               <Text
                 style={{
-                  fontWeight: 300*scale,
+                  fontWeight: 300 * scale,
                   color: colors.secondary,
                 }}>
                 ______________
               </Text>
               <Text
                 style={{
-                  fontSize: 17*scale,
+                  fontSize: 17 * scale,
                   color: colors.secondary,
                   textAlign: 'center',
-                  marginLeft: 20*scale,
-                  marginRight: 20*scale,
+                  marginLeft: 20 * scale,
+                  marginRight: 20 * scale,
                 }}>
                 Se connecter avec
               </Text>
               <Text
                 style={{
-                  fontWeight: 300*scale,
+                  fontWeight: 300 * scale,
                   color: colors.secondary,
                 }}>
                 ______________
               </Text>
             </View>
 
-            <View style={{flexDirection: 'row', marginBottom: 40*scale}}>
+            <View style={{flexDirection: 'row', marginBottom: 40 * scale}}>
               <Image
-                style={{marginRight: 15*scale, marginLeft: 20*scale, width: 60*scale, height: 60*scale}}
+                style={{
+                  marginRight: 15 * scale,
+                  marginLeft: 20 * scale,
+                  width: 60 * scale,
+                  height: 60 * scale,
+                }}
                 source={icons.google}
               />
               <Image
-                style={{marginRight: 15*scale, width: 60*scale, height: 60*scale}}
+                style={{
+                  marginRight: 15 * scale,
+                  width: 60 * scale,
+                  height: 60 * scale,
+                }}
                 source={icons.facebook}
               />
               <Image
-                style={{marginRight: 15*scale, width: 60*scale, height: 60*scale}}
+                style={{
+                  marginRight: 15 * scale,
+                  width: 60 * scale,
+                  height: 60 * scale,
+                }}
                 source={icons.x}
               />
             </View>
@@ -156,7 +191,7 @@ export default function LogIn({navigation}) {
               }}>
               <Text
                 style={{
-                  fontSize: 17*scale,
+                  fontSize: 17 * scale,
                   color: colors.secondary,
                   textAlign: 'center',
                 }}>
@@ -166,10 +201,10 @@ export default function LogIn({navigation}) {
               <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
                 <Text
                   style={{
-                    fontSize: 17*scale,
+                    fontSize: 17 * scale,
                     color: colors.primary,
                     textAlign: 'center',
-                    marginLeft: 10*scale,
+                    marginLeft: 10 * scale,
                   }}>
                   S'inscrire
                 </Text>

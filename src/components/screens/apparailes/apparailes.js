@@ -28,6 +28,12 @@ export default function Apparailes() {
   const [ipAddress, setIpAddress] = React.useState('');
   const [macAddress, setMacAddress] = React.useState('');
   
+
+
+
+  const [visible2, setVisible2] = React.useState(false);
+  const showModal2 = () => setVisible2(true);
+  const hideModal2 = () => setVisible2(false);
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: colors.Quaternary}}>
       <View style={{flex: 1, backgroundColor: colors.Quaternary}}>
@@ -50,7 +56,7 @@ export default function Apparailes() {
               {/* here the rest of code */}
 
 
-
+           
               <View
                 style={{
                   backgroundColor: colors.secondary,
@@ -66,12 +72,10 @@ export default function Apparailes() {
                   fontWeight: 'bold',
                 }}>
 
-<NativeBaseProvider>
-            <Fab renderInPortal={false} style={{position:'fixed',marginBottom:-500}}/>
-        </NativeBaseProvider>
+
                 {/* hna chof kifeh ra7 dir le filtre dyalkk
       zid focus to text 
-      zid licon et titre du chaque graphe
+    
   */}
                 <TouchableOpacity>
                   <Text
@@ -253,7 +257,7 @@ export default function Apparailes() {
                         color: colors.Quaternary,
                       }}
                       mode="contained"
-                      onPress={showModal}>
+                      onPress={showModal2}>
                       <Text
                         style={{
                           color: colors.Quaternary,
@@ -275,13 +279,15 @@ export default function Apparailes() {
               <CardPeripherique />
               <CardPeripherique />
               <CardPeripherique />
-
+         
             
             </NativeBaseProvider>
           </View>  
         </ScrollView>
 
-      
+        <NativeBaseProvider>
+            <Fab renderInPortal={false} shadow={2} onPress={showModal}  icon={<Image  source={icons.plus} name="plus"style={{width:30,height:30,tintColor:colors.Quaternary}} />} style={{marginBottom:80,width:70,height:70,backgroundColor:colors.primary}}/>
+        </NativeBaseProvider>
 
 
         <Modal
@@ -330,6 +336,196 @@ export default function Apparailes() {
               marginBottom: 20* scale,
             }}>
             Nouveau Peripherique
+          </Text>
+
+          <TextInput
+            label={
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                }}>
+                Type :{' '}
+                <Text
+                  style={{
+                    fontWeight: 'normal',
+                  }}>
+                  Ex .Mobile
+                </Text>
+              </Text>
+            }
+            value={text}
+            onChangeText={text => {
+              setText(text);
+              // change the text color to primary when the text changes
+              setTextColor(colors.primary);
+            }}
+            style={{
+              height: 50* scale,
+              backgroundColor: '#9DB3BE',
+              opacity: 0.6,
+              borderRadius: 5* scale,
+              color: colors.primary,
+              marginBottom: 10* scale,
+            }}
+          />
+
+          <TextInput
+            label={
+              <Text style={{fontWeight: 'bold'}} >
+                Acces :{' '}
+                <Text
+                  style={{
+                    fontWeight: 'normal',
+                  }}>
+                  Ex .Admin
+                </Text>
+              </Text>
+            }
+            value={access}
+            onChangeText={text => setAccess(text)
+              // change the text color to primary when the text changes
+              
+            }
+            style={{
+              height: 50* scale,
+              backgroundColor: '#9DB3BE',
+              opacity: 0.6,
+              borderRadius: 5* scale,
+              color: textColor,
+              marginBottom: 10* scale,
+            }}
+          />
+
+          <TextInput
+            label={
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                }}>
+                Adresse IP :{' '}
+                <Text
+                  style={{
+                    fontWeight: 'normal',
+                  }}>
+                  Ex .192.168.XXX.XXX
+                </Text>
+              </Text>
+            }
+            value={ipAddress}
+            onChangeText={text => setIpAddress(text)
+              // change the text color to primary when the text changes
+              
+            }
+            style={{
+              height: 50* scale,
+              backgroundColor: '#9DB3BE',
+              opacity: 0.6,
+              borderRadius: 5* scale,
+              color: textColor,
+              marginBottom: 10* scale,
+            }}
+          />
+          <TextInput
+            label={
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                }}>
+                Adresse MAC :{' '}
+                <Text
+                  style={{
+                    fontWeight: 'normal',
+                  }}>
+                  Ex .XX:XX:XX:XX
+                </Text>
+              </Text>
+            }
+            value={macAddress}
+            onChangeText={text => setMacAddress(text)
+            }
+            style={{
+              height: 50* scale,
+              backgroundColor: '#9DB3BE',
+              opacity: 0.6,
+              borderRadius: 5* scale,
+              color: textColor,
+              marginBottom: 10* scale,
+            }}
+          />
+
+          <View style={{justifyContent: 'center'}}>
+            <Button
+              style={{
+                width: 170* scale,
+                marginTop: 20* scale,
+                backgroundColor: colors.primary,
+                marginHorizontal: 'auto',
+                borderRadius: 10* scale,
+
+                color: colors.Quaternary,
+              }}
+              mode="contained"
+              onPress={hideModal}>
+              <Text
+                style={{
+                  color: colors.Quaternary,
+                  fontSize: 17 * scale,
+                  fontWeight: 'bold',
+                }}>
+                Confirmer
+              </Text>
+            </Button>
+
+            {/* hna push up */}
+          </View>
+        </Modal>
+
+        <Modal
+          visible={visible2}
+          onDismiss={hideModal2}
+          contentContainerStyle={{
+            padding: 40* scale,
+            margin: 40* scale,
+            backgroundColor: colors.white,
+            borderRadius: 20* scale,
+          }}>
+           
+
+<TouchableOpacity  style={{
+             flexDirection: 'row',
+             justifyContent: 'space-between',
+             alignItems: 'center',
+           
+            }} onPress={hideModal2}>
+<View>
+
+</View>
+    <Image
+            source={icons.exit}
+            
+            style={{
+              height: 30 * scale,
+              width: 30 * scale,
+              tintColor: colors.Quaternary,
+              padding: -20* scale,
+              margin: -20* scale,
+            
+            }}
+          />
+</TouchableOpacity>
+               
+        
+       
+
+          <Text
+            style={{
+              textAlign: 'center',
+              fontWeight: 'bold',
+              fontSize: 20* scale,
+              color: colors.Quaternary,
+              marginBottom: 20* scale,
+            }}>
+            Modifier caracteristiques
           </Text>
 
           <TextInput

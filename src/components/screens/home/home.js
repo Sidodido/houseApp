@@ -755,7 +755,7 @@ export default function Home() {
                             onLoad={() => setVideoLoaded(true)}
                             isLooping={true}
                             isMuted={true}
-                            shouldPlay={true}
+                            shouldPlay={false}
                             onError={error =>
                               console.error('Video error:', error)
                             }

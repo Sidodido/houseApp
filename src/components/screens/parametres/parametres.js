@@ -143,8 +143,8 @@ export default function Parametres() {
                   backgroundColor: colors.Quaternary,
                   borderRadius: 60 * scale, // this will create a semi-circle
                   position: 'fixed',
-                  marginHorizontal: 15,
-                  marginTop: 15,
+                  marginHorizontal: 15* scale,
+                  marginTop: 15* scale,
                 }}>
                 <View
                   style={{
@@ -467,14 +467,7 @@ export default function Parametres() {
           </View>
         </ScrollView>
 
-<View style={{
-  backgrondColor: colors.white,
-  height:100,
-  position: 'absolute'
-}}>
 
-
-</View>
 
 
 
@@ -492,7 +485,7 @@ export default function Parametres() {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              marginBottom: 20,
+              marginBottom: 20* scale,
             }}>
             <Text
               style={{

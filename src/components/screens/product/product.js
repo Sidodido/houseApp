@@ -8,7 +8,7 @@ import {Searchbar} from 'react-native-paper';
 import Flammes from '../statistiques/Flammes';
 import Mouvements from '../statistiques/Mouvements';
 import Gazes from '../statistiques/Gazes';
-import {Dimensions, StyleSheet,TouchableOpacity} from 'react-native';
+import {Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
 import {Card} from 'react-native-paper';
 import {Modal} from 'react-native-paper';
 const {width} = Dimensions.get('window');
@@ -34,26 +34,24 @@ export default function Product() {
               left: 0,
             }}>
             <NativeBaseProvider>
-
-            <View>
+              <View>
                 <Text
                   style={{
-                    fontSize: 22,
-                    fontWeight: 600,
+                    fontSize: 22 * scale,
+                    fontWeight: 600 * scale,
                     color: colors.secondary,
                     textAlign: 'center',
-                    marginTop: 30,
-                    marginBottom: 30,
+                    marginTop: 30 * scale,
+                    marginBottom: 30 * scale,
                   }}>
-                 Sélectionnez le produit qui vous intéresse
+                  Sélectionnez le produit qui vous intéresse
                 </Text>
               </View>
-
 
               <View
                 style={{
                   marginLeft: 20 * scale,
-                  marginHorizontal:10,
+                  marginHorizontal: 10,
                   fontSize: 18 * scale,
                   marginBottom: 20 * scale,
                   color: colors.secondary,
@@ -76,218 +74,187 @@ export default function Product() {
                       justifyContent: 'space-between',
                       alignItems: 'center',
                     }}>
-                   <Text
+                    <Text
                       style={{
                         fontSize: 27 * scale,
                         fontWeight: 400,
                         color: '#D9D9D9',
                         marginBottom: 0 * scale,
-                   
                       }}>
                       Installation
                     </Text>
 
-                    <View style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          
-                        }}>
-
-<Image
-                      source={images.produit2}
+                    <View
                       style={{
-                        height: 150 * scale,
-                        width: 150 * scale,
-                      
-                       
-                      }}
-                    />
- 
-<View style={{flexDirection:'column',justifyContent:'center'}}>
-
-
-
-
- <View
+                        width: '100%',
+                        flexDirection: 'row',
+                      }}>
+                      <Image
+                        source={images.produit2}
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-                            color: colors.secondary,
-                          }}>
-                          Version :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          1.3.0
-                        </Text>
-
-                       
-                      </View>
-
-
+                          height: 150 * scale,
+                          width: 150 * scale,
+                        }}
+                      />
 
                       <View
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
                         }}>
-                        <Text
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                         Battrie :
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
+                              color: colors.secondary,
+                            }}>
+                            Version :
+                          </Text>
 
-                        <Text
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
+
+                              color: colors.secondary,
+                            }}>
+                            1.3.0
+                          </Text>
+                        </View>
+
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                          3500 mh
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
 
-                       
+                              color: colors.secondary,
+                            }}>
+                            Battrie :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
+
+                              color: colors.secondary,
+                            }}>
+                            3500 mh
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 1 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
+
+                              color: colors.secondary,
+                            }}>
+                            ........
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 2 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
+
+                              color: colors.secondary,
+                            }}>
+                            .....................;
+                          </Text>
+                        </View>
                       </View>
-
-                      
- <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 1 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          ........
-                        </Text>
-
-                       
-                      </View>
-
-
-                      <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 2 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          .....................;
-                        </Text>
-
-                       
-                      </View>
-
-                      </View>
-
                     </View>
 
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{flex: 1}}></View>
+                      <Button
+                        style={{
+                          width: 130 * scale,
+                          height: 40 * scale,
+                          marginRight: 15 * scale,
+                          backgroundColor: colors.primary,
 
-                    <View style={{flexDirection:'row'}}>
-                      <View style={{flex:1}}>
+                          borderRadius: 10 * scale,
+                          alignItems: 'center',
 
+                          color: colors.Quaternary,
+                        }}
+                        mode="contained">
+                        <Text
+                          style={{
+                            color: colors.Quaternary,
+                            fontSize: 14 * scale,
+                            fontWeight: 'bold',
+                          }}>
+                          Commender
+                        </Text>
+                      </Button>
 
-                      </View>
-            <Button
-              style={{
-                width: 130 * scale,
-                height:40* scale,
-               marginRight:15,
-                backgroundColor: colors.primary,
-               
-                borderRadius: 10 * scale,
-alignItems:'center',
-
-                color: colors.Quaternary,
-              }}
-              mode="contained"
-              >
-              <Text
-                style={{
-                  color: colors.Quaternary,
-                  fontSize: 14 * scale,
-                  fontWeight: 'bold',
-                }}>
-                Commender
-              </Text>
-            </Button>
-
-            {/* hna push up */}
-          </View>
-                    <TouchableOpacity >
-                     
-                    </TouchableOpacity>
+                      {/* hna push up */}
+                    </View>
+                    <TouchableOpacity></TouchableOpacity>
                   </Card.Content>
-                  
                 </Card>
               </View>
-             
 
               <View
                 style={{
                   marginLeft: 20 * scale,
-                  marginHorizontal:10,
+                  marginHorizontal: 10,
                   fontSize: 18 * scale,
                   marginBottom: 20 * scale,
                   color: colors.secondary,
@@ -310,218 +277,187 @@ alignItems:'center',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                     }}>
-                   <Text
+                    <Text
                       style={{
                         fontSize: 27 * scale,
                         fontWeight: 400,
                         color: '#D9D9D9',
                         marginBottom: 0 * scale,
-                   
                       }}>
                       Capteur de flamme
                     </Text>
 
-                    <View style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          
-                        }}>
-
-<Image
-                      source={images.produit1}
+                    <View
                       style={{
-                        height: 150 * scale,
-                        width: 150 * scale,
-                      
-                       
-                      }}
-                    />
- 
-<View style={{flexDirection:'column',justifyContent:'center'}}>
-
-
-
-
- <View
+                        width: '100%',
+                        flexDirection: 'row',
+                      }}>
+                      <Image
+                        source={images.produit1}
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-                            color: colors.secondary,
-                          }}>
-                          Version :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          1.3.0
-                        </Text>
-
-                       
-                      </View>
-
-
+                          height: 150 * scale,
+                          width: 150 * scale,
+                        }}
+                      />
 
                       <View
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
                         }}>
-                        <Text
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                         Battrie :
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
+                              color: colors.secondary,
+                            }}>
+                            Version :
+                          </Text>
 
-                        <Text
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7 * scale,
+
+                              color: colors.secondary,
+                            }}>
+                            1.3.0
+                          </Text>
+                        </View>
+
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                          3500 mh
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
 
-                       
+                              color: colors.secondary,
+                            }}>
+                            Battrie :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            3500 mh
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 1 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            ........
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 2 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            .....................;
+                          </Text>
+                        </View>
                       </View>
-
-                      
- <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 1 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          ........
-                        </Text>
-
-                       
-                      </View>
-
-
-                      <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 2 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          .....................;
-                        </Text>
-
-                       
-                      </View>
-
-                      </View>
-
                     </View>
 
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{flex: 1}}></View>
+                      <Button
+                        style={{
+                          width: 130 * scale,
+                          height: 40 * scale,
+                          marginRight: 15,
+                          backgroundColor: colors.primary,
 
-                    <View style={{flexDirection:'row'}}>
-                      <View style={{flex:1}}>
+                          borderRadius: 10 * scale,
+                          alignItems: 'center',
 
+                          color: colors.Quaternary,
+                        }}
+                        mode="contained">
+                        <Text
+                          style={{
+                            color: colors.Quaternary,
+                            fontSize: 14 * scale,
+                            fontWeight: 'bold',
+                          }}>
+                          Commender
+                        </Text>
+                      </Button>
 
-                      </View>
-            <Button
-              style={{
-                width: 130 * scale,
-                height:40* scale,
-               marginRight:15,
-                backgroundColor: colors.primary,
-               
-                borderRadius: 10 * scale,
-alignItems:'center',
-
-                color: colors.Quaternary,
-              }}
-              mode="contained"
-              >
-              <Text
-                style={{
-                  color: colors.Quaternary,
-                  fontSize: 14 * scale,
-                  fontWeight: 'bold',
-                }}>
-                Commender
-              </Text>
-            </Button>
-
-            {/* hna push up */}
-          </View>
-                    <TouchableOpacity >
-                     
-                    </TouchableOpacity>
+                      {/* hna push up */}
+                    </View>
+                    <TouchableOpacity></TouchableOpacity>
                   </Card.Content>
-                  
                 </Card>
               </View>
-           
 
               <View
                 style={{
                   marginLeft: 20 * scale,
-                  marginHorizontal:10,
+                  marginHorizontal: 10,
                   fontSize: 18 * scale,
                   marginBottom: 20 * scale,
                   color: colors.secondary,
@@ -544,217 +480,187 @@ alignItems:'center',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                     }}>
-                   <Text
+                    <Text
                       style={{
                         fontSize: 27 * scale,
                         fontWeight: 400,
                         color: '#D9D9D9',
                         marginBottom: 0 * scale,
-                   
                       }}>
-                     Alarme
+                      Alarme
                     </Text>
 
-                    <View style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          
-                        }}>
-
-<Image
-                      source={images.produit5}
+                    <View
                       style={{
-                        height: 150 * scale,
-                        width: 150 * scale,
-                      
-                       
-                      }}
-                    />
- 
-<View style={{flexDirection:'column',justifyContent:'center'}}>
-
-
-
-
- <View
+                        width: '100%',
+                        flexDirection: 'row',
+                      }}>
+                      <Image
+                        source={images.produit5}
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-                            color: colors.secondary,
-                          }}>
-                          Version :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          1.3.0
-                        </Text>
-
-                       
-                      </View>
-
-
+                          height: 150 * scale,
+                          width: 150 * scale,
+                        }}
+                      />
 
                       <View
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
                         }}>
-                        <Text
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                         Battrie :
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+                              color: colors.secondary,
+                            }}>
+                            Version :
+                          </Text>
 
-                        <Text
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            1.3.0
+                          </Text>
+                        </View>
+
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                          3500 mh
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
 
-                       
+                              color: colors.secondary,
+                            }}>
+                            Battrie :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            3500 mh
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 1 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            ........
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 2 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            .....................;
+                          </Text>
+                        </View>
                       </View>
-
-                      
- <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 1 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          ........
-                        </Text>
-
-                       
-                      </View>
-
-
-                      <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 2 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          .....................;
-                        </Text>
-
-                       
-                      </View>
-
-                      </View>
-
                     </View>
 
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{flex: 1}}></View>
+                      <Button
+                        style={{
+                          width: 130 * scale,
+                          height: 40 * scale,
+                          marginRight: 15,
+                          backgroundColor: colors.primary,
 
-                    <View style={{flexDirection:'row'}}>
-                      <View style={{flex:1}}>
+                          borderRadius: 10 * scale,
+                          alignItems: 'center',
 
+                          color: colors.Quaternary,
+                        }}
+                        mode="contained">
+                        <Text
+                          style={{
+                            color: colors.Quaternary,
+                            fontSize: 14 * scale,
+                            fontWeight: 'bold',
+                          }}>
+                          Commender
+                        </Text>
+                      </Button>
 
-                      </View>
-            <Button
-              style={{
-                width: 130 * scale,
-                height:40* scale,
-               marginRight:15,
-                backgroundColor: colors.primary,
-               
-                borderRadius: 10 * scale,
-alignItems:'center',
-
-                color: colors.Quaternary,
-              }}
-              mode="contained"
-              >
-              <Text
-                style={{
-                  color: colors.Quaternary,
-                  fontSize: 14 * scale,
-                  fontWeight: 'bold',
-                }}>
-                Commender
-              </Text>
-            </Button>
-
-            {/* hna push up */}
-          </View>
-                    <TouchableOpacity >
-                     
-                    </TouchableOpacity>
+                      {/* hna push up */}
+                    </View>
+                    <TouchableOpacity></TouchableOpacity>
                   </Card.Content>
-                  
                 </Card>
               </View>
 
               <View
                 style={{
                   marginLeft: 20 * scale,
-                  marginHorizontal:10,
+                  marginHorizontal: 10,
                   fontSize: 18 * scale,
                   marginBottom: 20 * scale,
                   color: colors.secondary,
@@ -777,218 +683,187 @@ alignItems:'center',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                     }}>
-                   <Text
+                    <Text
                       style={{
                         fontSize: 27 * scale,
                         fontWeight: 400,
                         color: '#D9D9D9',
                         marginBottom: 0 * scale,
-                   
                       }}>
-                     Controleur
+                      Controleur
                     </Text>
 
-                    <View style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          
-                        }}>
-
-<Image
-                      source={images.produit4}
+                    <View
                       style={{
-                        height: 150 * scale,
-                        width: 150 * scale,
-                      
-                       
-                      }}
-                    />
- 
-<View style={{flexDirection:'column',justifyContent:'center'}}>
-
-
-
-
- <View
+                        width: '100%',
+                        flexDirection: 'row',
+                      }}>
+                      <Image
+                        source={images.produit4}
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-                            color: colors.secondary,
-                          }}>
-                          Version :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          1.3.0
-                        </Text>
-
-                       
-                      </View>
-
-
+                          height: 150 * scale,
+                          width: 150 * scale,
+                        }}
+                      />
 
                       <View
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
                         }}>
-                        <Text
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                         Battrie :
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+                              color: colors.secondary,
+                            }}>
+                            Version :
+                          </Text>
 
-                        <Text
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            1.3.0
+                          </Text>
+                        </View>
+
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                          3500 mh
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
 
-                       
+                              color: colors.secondary,
+                            }}>
+                            Battrie :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            3500 mh
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 1 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            ........
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 2 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            .....................;
+                          </Text>
+                        </View>
                       </View>
-
-                      
- <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 1 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          ........
-                        </Text>
-
-                       
-                      </View>
-
-
-                      <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 2 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          .....................;
-                        </Text>
-
-                       
-                      </View>
-
-                      </View>
-
                     </View>
 
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{flex: 1}}></View>
+                      <Button
+                        style={{
+                          width: 130 * scale,
+                          height: 40 * scale,
+                          marginRight: 15,
+                          backgroundColor: colors.primary,
 
-                    <View style={{flexDirection:'row'}}>
-                      <View style={{flex:1}}>
+                          borderRadius: 10 * scale,
+                          alignItems: 'center',
 
+                          color: colors.Quaternary,
+                        }}
+                        mode="contained">
+                        <Text
+                          style={{
+                            color: colors.Quaternary,
+                            fontSize: 14 * scale,
+                            fontWeight: 'bold',
+                          }}>
+                          Commender
+                        </Text>
+                      </Button>
 
-                      </View>
-            <Button
-              style={{
-                width: 130 * scale,
-                height:40* scale,
-               marginRight:15,
-                backgroundColor: colors.primary,
-               
-                borderRadius: 10 * scale,
-alignItems:'center',
-
-                color: colors.Quaternary,
-              }}
-              mode="contained"
-              >
-              <Text
-                style={{
-                  color: colors.Quaternary,
-                  fontSize: 14 * scale,
-                  fontWeight: 'bold',
-                }}>
-                Commender
-              </Text>
-            </Button>
-
-            {/* hna push up */}
-          </View>
-                    <TouchableOpacity >
-                     
-                    </TouchableOpacity>
+                      {/* hna push up */}
+                    </View>
+                    <TouchableOpacity></TouchableOpacity>
                   </Card.Content>
-                  
                 </Card>
               </View>
-
 
               <View
                 style={{
                   marginLeft: 20 * scale,
-                  marginHorizontal:10,
+                  marginHorizontal: 10,
                   fontSize: 18 * scale,
                   marginBottom: 20 * scale,
                   color: colors.secondary,
@@ -1011,218 +886,187 @@ alignItems:'center',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                     }}>
-                   <Text
+                    <Text
                       style={{
                         fontSize: 27 * scale,
                         fontWeight: 400,
                         color: '#D9D9D9',
                         marginBottom: 0 * scale,
-                   
                       }}>
-                     Capteur de gaz
+                      Capteur de gaz
                     </Text>
 
-                    <View style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          
-                        }}>
-
-<Image
-                      source={images.produit6}
+                    <View
                       style={{
-                        height: 150 * scale,
-                        width: 150 * scale,
-                      
-                       
-                      }}
-                    />
- 
-<View style={{flexDirection:'column',justifyContent:'center'}}>
-
-
-
-
- <View
+                        width: '100%',
+                        flexDirection: 'row',
+                      }}>
+                      <Image
+                        source={images.produit6}
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-                            color: colors.secondary,
-                          }}>
-                          Version :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          1.3.0
-                        </Text>
-
-                       
-                      </View>
-
-
+                          height: 150 * scale,
+                          width: 150 * scale,
+                        }}
+                      />
 
                       <View
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
                         }}>
-                        <Text
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                         Battrie :
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+                              color: colors.secondary,
+                            }}>
+                            Version :
+                          </Text>
 
-                        <Text
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            1.3.0
+                          </Text>
+                        </View>
+
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                          3500 mh
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
 
-                       
+                              color: colors.secondary,
+                            }}>
+                            Battrie :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            3500 mh
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 1 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            ........
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 2 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            .....................;
+                          </Text>
+                        </View>
                       </View>
-
-                      
- <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 1 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          ........
-                        </Text>
-
-                       
-                      </View>
-
-
-                      <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 2 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          .....................;
-                        </Text>
-
-                       
-                      </View>
-
-                      </View>
-
                     </View>
 
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{flex: 1}}></View>
+                      <Button
+                        style={{
+                          width: 130 * scale,
+                          height: 40 * scale,
+                          marginRight: 15,
+                          backgroundColor: colors.primary,
 
-                    <View style={{flexDirection:'row'}}>
-                      <View style={{flex:1}}>
+                          borderRadius: 10 * scale,
+                          alignItems: 'center',
 
+                          color: colors.Quaternary,
+                        }}
+                        mode="contained">
+                        <Text
+                          style={{
+                            color: colors.Quaternary,
+                            fontSize: 14 * scale,
+                            fontWeight: 'bold',
+                          }}>
+                          Commender
+                        </Text>
+                      </Button>
 
-                      </View>
-            <Button
-              style={{
-                width: 130 * scale,
-                height:40* scale,
-               marginRight:15,
-                backgroundColor: colors.primary,
-               
-                borderRadius: 10 * scale,
-alignItems:'center',
-
-                color: colors.Quaternary,
-              }}
-              mode="contained"
-              >
-              <Text
-                style={{
-                  color: colors.Quaternary,
-                  fontSize: 14 * scale,
-                  fontWeight: 'bold',
-                }}>
-                Commender
-              </Text>
-            </Button>
-
-            {/* hna push up */}
-          </View>
-                    <TouchableOpacity >
-                     
-                    </TouchableOpacity>
+                      {/* hna push up */}
+                    </View>
+                    <TouchableOpacity></TouchableOpacity>
                   </Card.Content>
-                  
                 </Card>
               </View>
 
-             
               <View
                 style={{
                   marginLeft: 20 * scale,
-                  marginHorizontal:10,
+                  marginHorizontal: 10,
                   fontSize: 18 * scale,
                   marginBottom: 20 * scale,
                   color: colors.secondary,
@@ -1245,217 +1089,186 @@ alignItems:'center',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                     }}>
-                   <Text
+                    <Text
                       style={{
                         fontSize: 27 * scale,
                         fontWeight: 400,
                         color: '#D9D9D9',
                         marginBottom: 0 * scale,
-                   
                       }}>
-                    Capteur de mouvement
+                      Capteur de mouvement
                     </Text>
 
-                    <View style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          
-                        }}>
-
-<Image
-                      source={images.produit7}
+                    <View
                       style={{
-                        height: 150 * scale,
-                        width: 150 * scale,
-                      
-                       
-                      }}
-                    />
- 
-<View style={{flexDirection:'column',justifyContent:'center'}}>
-
-
-
-
- <View
+                        width: '100%',
+                        flexDirection: 'row',
+                      }}>
+                      <Image
+                        source={images.produit7}
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-                            color: colors.secondary,
-                          }}>
-                          Version :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          1.3.0
-                        </Text>
-
-                       
-                      </View>
-
-
+                          height: 150 * scale,
+                          width: 150 * scale,
+                        }}
+                      />
 
                       <View
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
                         }}>
-                        <Text
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                         Battrie :
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+                              color: colors.secondary,
+                            }}>
+                            Version :
+                          </Text>
 
-                        <Text
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            1.3.0
+                          </Text>
+                        </View>
+
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                          3500 mh
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
 
-                       
+                              color: colors.secondary,
+                            }}>
+                            Battrie :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            3500 mh
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 1 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            ........
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 2 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            .....................;
+                          </Text>
+                        </View>
                       </View>
-
-                      
- <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 1 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          ........
-                        </Text>
-
-                       
-                      </View>
-
-
-                      <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 2 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          .....................;
-                        </Text>
-
-                       
-                      </View>
-
-                      </View>
-
                     </View>
 
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{flex: 1}}></View>
+                      <Button
+                        style={{
+                          width: 130 * scale,
+                          height: 40 * scale,
+                          marginRight: 15,
+                          backgroundColor: colors.primary,
 
-                    <View style={{flexDirection:'row'}}>
-                      <View style={{flex:1}}>
+                          borderRadius: 10 * scale,
+                          alignItems: 'center',
 
+                          color: colors.Quaternary,
+                        }}
+                        mode="contained">
+                        <Text
+                          style={{
+                            color: colors.Quaternary,
+                            fontSize: 14 * scale,
+                            fontWeight: 'bold',
+                          }}>
+                          Commender
+                        </Text>
+                      </Button>
 
-                      </View>
-            <Button
-              style={{
-                width: 130 * scale,
-                height:40* scale,
-               marginRight:15,
-                backgroundColor: colors.primary,
-               
-                borderRadius: 10 * scale,
-alignItems:'center',
-
-                color: colors.Quaternary,
-              }}
-              mode="contained"
-              >
-              <Text
-                style={{
-                  color: colors.Quaternary,
-                  fontSize: 14 * scale,
-                  fontWeight: 'bold',
-                }}>
-                Commender
-              </Text>
-            </Button>
-
-            {/* hna push up */}
-          </View>
-           
+                      {/* hna push up */}
+                    </View>
                   </Card.Content>
-                  
                 </Card>
               </View>
 
-
-              
               <View
                 style={{
                   marginLeft: 20 * scale,
-                  marginHorizontal:10,
+                  marginHorizontal: 10,
                   fontSize: 18 * scale,
                   marginBottom: 20 * scale,
                   color: colors.secondary,
@@ -1478,208 +1291,179 @@ alignItems:'center',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                     }}>
-                   <Text
+                    <Text
                       style={{
                         fontSize: 27 * scale,
                         fontWeight: 400,
                         color: '#D9D9D9',
                         marginBottom: 0 * scale,
-                   
                       }}>
-                    Camera de survailliance
+                      Camera de survailliance
                     </Text>
 
-                    <View style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          
-                        }}>
-
-<Image
-                      source={images.produit3}
+                    <View
                       style={{
-                        height: 150 * scale,
-                        width: 150 * scale,
-                      
-                       
-                      }}
-                    />
- 
-<View style={{flexDirection:'column',justifyContent:'center'}}>
-
-
-
-
- <View
+                        width: '100%',
+                        flexDirection: 'row',
+                      }}>
+                      <Image
+                        source={images.produit3}
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-                            color: colors.secondary,
-                          }}>
-                          Version :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          1.3.0
-                        </Text>
-
-                       
-                      </View>
-
-
+                          height: 150 * scale,
+                          width: 150 * scale,
+                        }}
+                      />
 
                       <View
                         style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
                         }}>
-                        <Text
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                         Battrie :
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+                              color: colors.secondary,
+                            }}>
+                            Version :
+                          </Text>
 
-                        <Text
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            1.3.0
+                          </Text>
+                        </View>
+
+                        <View
                           style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           }}>
-                          3500 mh
-                        </Text>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
 
-                       
+                              color: colors.secondary,
+                            }}>
+                            Battrie :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            3500 mh
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 1 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            ........
+                          </Text>
+                        </View>
+
+                        <View
+                          style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            Caracteristique 2 :
+                          </Text>
+
+                          <Text
+                            style={{
+                              fontSize: 14 * scale,
+                              textAlign: 'left',
+                              marginLeft: 7* scale,
+
+                              color: colors.secondary,
+                            }}>
+                            .....................;
+                          </Text>
+                        </View>
                       </View>
-
-                      
- <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 1 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          ........
-                        </Text>
-
-                       
-                      </View>
-
-
-                      <View
-                        style={{
-                          width: '100%',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                        }}>
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            color: colors.secondary,
-                          }}>
-                          Caracteristique 2 :
-                        </Text>
-
-                        <Text
-                          style={{
-                            fontSize: 14 * scale,
-                            textAlign: 'left',
-                            marginLeft:7,
-
-                            
-                            color: colors.secondary,
-                          }}>
-                          .....................;
-                        </Text>
-
-                       
-                      </View>
-
-                      </View>
-
                     </View>
 
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{flex: 1}}></View>
+                      <Button
+                        style={{
+                          width: 130 * scale,
+                          height: 40 * scale,
+                          marginRight: 15,
+                          backgroundColor: colors.primary,
 
-                    <View style={{flexDirection:'row'}}>
-                      <View style={{flex:1}}>
+                          borderRadius: 10 * scale,
+                          alignItems: 'center',
 
+                          color: colors.Quaternary,
+                        }}
+                        mode="contained">
+                        <Text
+                          style={{
+                            color: colors.Quaternary,
+                            fontSize: 14 * scale,
+                            fontWeight: 'bold',
+                          }}>
+                          Commender
+                        </Text>
+                      </Button>
 
-                      </View>
-            <Button
-              style={{
-                width: 130 * scale,
-                height:40* scale,
-               marginRight:15,
-                backgroundColor: colors.primary,
-               
-                borderRadius: 10 * scale,
-alignItems:'center',
-
-                color: colors.Quaternary,
-              }}
-              mode="contained"
-              >
-              <Text
-                style={{
-                  color: colors.Quaternary,
-                  fontSize: 14 * scale,
-                  fontWeight: 'bold',
-                }}>
-                Commender
-              </Text>
-            </Button>
-
-            {/* hna push up */}
-          </View>
-           
+                      {/* hna push up */}
+                    </View>
                   </Card.Content>
-                  
                 </Card>
               </View>
 
