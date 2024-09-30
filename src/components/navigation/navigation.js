@@ -23,7 +23,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="OTP">
+        initialRouteName="Main">
           
       
         <Stack.Screen name="Main" component={DrawerNavigation} />

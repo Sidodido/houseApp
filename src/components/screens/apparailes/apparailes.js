@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../header';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
@@ -12,6 +12,12 @@ const scale = width / 420;
 import { Fab } from 'native-base';
 import {Modal, Portal} from 'react-native-paper';
 import {TextInput} from 'react-native-paper';
+import Menu from "./menu";
+
+
+
+
+
 
 export default function Apparailes() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -34,6 +40,17 @@ export default function Apparailes() {
   const [visible2, setVisible2] = React.useState(false);
   const showModal2 = () => setVisible2(true);
   const hideModal2 = () => setVisible2(false);
+
+  const [items, setItems] = useState(Menu);
+  const filterItem =(categoryItem) =>{
+    const updatedItems = Menu.filter((curElem) => {
+return curElem.category === categoryItem;
+
+    });
+setItems(updatedItems);    
+  }
+
+  
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: colors.Quaternary}}>
       <View style={{flex: 1, backgroundColor: colors.Quaternary}}>
@@ -41,6 +58,8 @@ export default function Apparailes() {
         
   
         <ScrollView>
+
+
           <View
             style={{
               width: '100%', // adjust the width to your needs
@@ -61,7 +80,7 @@ export default function Apparailes() {
                 style={{
                   backgroundColor: colors.secondary,
                   height: 50 * scale,
-                  marginHorizontal: 100 * scale,
+                  marginHorizontal: 50 * scale,
                   borderRadius: 20 * scale,
                   marginTop: 40 * scale,
                   marginBottom: 0 * scale,
@@ -77,8 +96,9 @@ export default function Apparailes() {
       zid focus to text 
     
   */}
-                <TouchableOpacity>
+                <TouchableOpacity  onPress={() => setItems(Menu)}>
                   <Text
+                  
                     style={{
                       fontWeight: 'bold',
                       color: colors.white,
@@ -87,17 +107,29 @@ export default function Apparailes() {
                   </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => filterItem("mobile")}>
                   <Text
+                 
                     style={{
                       fontWeight: 'bold',
                       color: colors.white,
                     }}>
-                    Apparails
+                    Mobile
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => filterItem("tablette")}>
                   <Text
+                 
+                    style={{
+                      fontWeight: 'bold',
+                      color: colors.white,
+                    }}>
+                    Tablette
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => filterItem("produit")}>
+                  <Text
+                  
                     style={{
                       fontWeight: 'bold',
                       color: colors.white,
@@ -121,7 +153,14 @@ export default function Apparailes() {
                   marginTop: 10* scale,
                 }}></View>
 
+
+
+
+{items.map((elem) => {
+          const { id, acces, title, category,adresseIP,adresseMAC } = elem;
+          return (
               <Card
+              key={id}
                 elevation={4}
                 style={{
                   height: 270 * scale,
@@ -146,7 +185,7 @@ export default function Apparailes() {
                       marginBottom: 20* scale,
                       fontWeight: 'bold',
                     }}>
-                    peripherique N#
+                    peripherique {id}
                   </Text>
 
                   <View
@@ -173,7 +212,7 @@ export default function Apparailes() {
                           fontSize: 17 * scale,
                           fontWeight: 'bold',
                         }}>
-                        Mobile
+                        {category}
                       </Text>
                     </View>
 
@@ -197,7 +236,7 @@ export default function Apparailes() {
                           fontSize: 17 * scale,
                           fontWeight: 'bold',
                         }}>
-                        Admin
+                        {acces}
                       </Text>
                     </View>
 
@@ -221,7 +260,7 @@ export default function Apparailes() {
                           fontSize: 17 * scale,
                           fontWeight: 'bold',
                         }}>
-                        192.168.123.132
+                        {adresseIP}
                       </Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>
@@ -241,13 +280,14 @@ export default function Apparailes() {
                           fontSize: 17 * scale,
                           fontWeight: 'bold',
                         }}>
-                        00:1B:44:11:3A:B7
+                        {adresseMAC}
                       </Text>
                     </View>
                   </View>
 
                   <View style={{justifyContent: 'center'}}>
                     <Button
+                     key={id}
                       style={{
                         width: 170* scale,
                         backgroundColor: colors.primary,
@@ -259,6 +299,7 @@ export default function Apparailes() {
                       mode="contained"
                       onPress={showModal2}>
                       <Text
+                      
                         style={{
                           color: colors.Quaternary,
                           fontSize: 17 * scale,
@@ -273,12 +314,9 @@ export default function Apparailes() {
                 </Card.Content>
               </Card>
 
-              <CardPeripherique />
-              <CardPeripherique />
-              <CardPeripherique />
-              <CardPeripherique />
-              <CardPeripherique />
-              <CardPeripherique />
+);
+})}
+
          
             
             </NativeBaseProvider>
@@ -480,7 +518,12 @@ export default function Apparailes() {
           </View>
         </Modal>
 
+
+        {items.map((elem) => {
+          const { id, acces, title, category,adresseIP,adresseMAC } = elem;
+          return (
         <Modal
+        key={id}
           visible={visible2}
           onDismiss={hideModal2}
           contentContainerStyle={{
@@ -539,7 +582,7 @@ export default function Apparailes() {
                   style={{
                     fontWeight: 'normal',
                   }}>
-                  Ex .Mobile
+                  {category}
                 </Text>
               </Text>
             }
@@ -567,7 +610,7 @@ export default function Apparailes() {
                   style={{
                     fontWeight: 'normal',
                   }}>
-                  Ex .Admin
+                  {acces}
                 </Text>
               </Text>
             }
@@ -597,7 +640,7 @@ export default function Apparailes() {
                   style={{
                     fontWeight: 'normal',
                   }}>
-                  Ex .192.168.XXX.XXX
+                  {adresseIP}
                 </Text>
               </Text>
             }
@@ -626,7 +669,7 @@ export default function Apparailes() {
                   style={{
                     fontWeight: 'normal',
                   }}>
-                  Ex .XX:XX:XX:XX
+                  {adresseMAC}
                 </Text>
               </Text>
             }
@@ -669,6 +712,8 @@ export default function Apparailes() {
             {/* hna push up */}
           </View>
         </Modal>
+        );
+      })}
       </View>
      
     </SafeAreaView>  
