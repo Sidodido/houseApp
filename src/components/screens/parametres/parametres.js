@@ -467,6 +467,18 @@ export default function Parametres() {
           </View>
         </ScrollView>
 
+<View style={{
+  backgrondColor: colors.white,
+  height:100,
+  position: 'absolute'
+}}>
+
+
+</View>
+
+
+
+
         <Modal
           visible={visible}
           onDismiss={hideModal}
@@ -615,7 +627,7 @@ export default function Parametres() {
                 marginHorizontal: 'auto',
                 borderRadius: 10 * scale,
 alignItems:'center',
-padding:5* scale,
+padding:0* scale,
                 color: colors.Quaternary,
               }}
               mode="contained"
@@ -754,7 +766,7 @@ padding:5* scale,
                 marginHorizontal: 'auto',
                 borderRadius: 10 * scale,
 alignItems:'center',
-padding:5* scale,
+padding:0* scale,
                 color: colors.Quaternary,
               }}
               mode="contained"

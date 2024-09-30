@@ -9,7 +9,7 @@ import {Button, Card, Switch} from 'react-native-paper';
 import CardPeripherique from './cardPeripherique';
 const {width} = Dimensions.get('window');
 const scale = width / 420;
-
+import { Fab } from 'native-base';
 import {Modal, Portal} from 'react-native-paper';
 import {TextInput} from 'react-native-paper';
 
@@ -32,6 +32,8 @@ export default function Apparailes() {
     <SafeAreaView style={{flex: 1, backgroundColor: colors.Quaternary}}>
       <View style={{flex: 1, backgroundColor: colors.Quaternary}}>
         <Header title="Apparailes" />
+        
+  
         <ScrollView>
           <View
             style={{
@@ -47,9 +49,72 @@ export default function Apparailes() {
             <NativeBaseProvider>
               {/* here the rest of code */}
 
+
+
               <View
                 style={{
-                  marginTop: 30* scale,
+                  backgroundColor: colors.secondary,
+                  height: 50 * scale,
+                  marginHorizontal: 100 * scale,
+                  borderRadius: 20 * scale,
+                  marginTop: 40 * scale,
+                  marginBottom: 0 * scale,
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  padding: 15 * scale,
+                  fontWeight: 'bold',
+                }}>
+
+<NativeBaseProvider>
+            <Fab renderInPortal={false} style={{position:'fixed',marginBottom:-500}}/>
+        </NativeBaseProvider>
+                {/* hna chof kifeh ra7 dir le filtre dyalkk
+      zid focus to text 
+      zid licon et titre du chaque graphe
+  */}
+                <TouchableOpacity>
+                  <Text
+                    style={{
+                      fontWeight: 'bold',
+                      color: colors.white,
+                    }}>
+                    Tout
+                  </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                  <Text
+                    style={{
+                      fontWeight: 'bold',
+                      color: colors.white,
+                    }}>
+                    Apparails
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Text
+                    style={{
+                      fontWeight: 'bold',
+                      color: colors.white,
+                    }}>
+                    produits
+                  </Text>
+                </TouchableOpacity>
+
+               
+              </View>
+
+
+
+
+
+
+
+
+              <View
+                style={{
+                  marginTop: 10* scale,
                 }}></View>
 
               <Card
@@ -210,9 +275,15 @@ export default function Apparailes() {
               <CardPeripherique />
               <CardPeripherique />
               <CardPeripherique />
+
+            
             </NativeBaseProvider>
-          </View>
+          </View>  
         </ScrollView>
+
+      
+
+
         <Modal
           visible={visible}
           onDismiss={hideModal}
@@ -403,6 +474,8 @@ export default function Apparailes() {
           </View>
         </Modal>
       </View>
-    </SafeAreaView>
+     
+    </SafeAreaView>  
+      
   );
 }

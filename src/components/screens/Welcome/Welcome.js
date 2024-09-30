@@ -33,10 +33,12 @@ export default function Welcome( {navigation}) {
               alignItems: 'center',
               marginVertical: 'auto',
             }}>
+
             <Image
               source={images.logo2}
               style={{width: 250, height: 180, marginBottom: 50}}
             />
+
             <Button
               style={{
                 width: 170 * scale,
@@ -63,6 +65,5 @@ export default function Welcome( {navigation}) {
       </View>
     </SafeAreaView>
 
-    //  <Navigation/>
   );
 }

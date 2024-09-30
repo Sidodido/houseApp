@@ -42,10 +42,10 @@ const password = require('../../assets/pageHomeAssets/password.png');
 const facebook = require('../../assets/pageHomeAssets/facebook.png');
 const x = require('../../assets/pageHomeAssets/x.png');
 const google = require('../../assets/pageHomeAssets/google.png');
-const build = require('../../assets/pageHomeAssets/build.png');
-const miseAjoure = require('../../assets/pageHomeAssets/miseAjoure.png');
-const certificate = require('../../assets/pageHomeAssets/certificate.png');
-const carTemp = require('../../assets/pageHomeAssets/carTemp.png');
+const build = require('../../assets/pageHomeAssets/build2.png');
+const miseAjoure = require('../../assets/pageHomeAssets/download2.png');
+const certificate = require('../../assets/pageHomeAssets/certificate2.png');
+const carTemp = require('../../assets/pageHomeAssets/preVente2.png');
 
 
 
