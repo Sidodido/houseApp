@@ -91,10 +91,6 @@ setItems(updatedItems);
                 }}>
 
 
-                {/* hna chof kifeh ra7 dir le filtre dyalkk
-      zid focus to text 
-    
-  */}
                 <TouchableOpacity  onPress={() => setItems(Menu)}>
                   <Text
                   
