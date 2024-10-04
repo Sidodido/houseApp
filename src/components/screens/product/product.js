@@ -5,9 +5,7 @@ import {View, Text, Image, ScrollView} from 'react-native';
 import {NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 import {Searchbar} from 'react-native-paper';
-import Flammes from '../statistiques/Flammes';
-import Mouvements from '../statistiques/Mouvements';
-import Gazes from '../statistiques/Gazes';
+
 import {Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
 import {Card} from 'react-native-paper';
 import {Modal} from 'react-native-paper';
@@ -227,7 +225,7 @@ export default function Product() {
                           height: 40 * scale,
                           marginRight: 15 * scale,
                           backgroundColor: colors.primary,
-
+justifyContent:'center',
                           borderRadius: 10 * scale,
                           alignItems: 'center',
 
@@ -239,6 +237,8 @@ export default function Product() {
                             color: colors.Quaternary,
                             fontSize: 14 * scale,
                             fontWeight: 'bold',
+justifyContent:'center',
+
                           }}>
                           Commender
                         </Text>

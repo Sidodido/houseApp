@@ -37,7 +37,7 @@ const Caracteristique = () => {
           <View
             style={{
               width: '100%', 
-              height: 1300, 
+              height: 1300 * scale, 
               backgroundColor: colors.tertiary,
               borderRadius: 70 * scale, 
               position: 'fixed',
@@ -48,12 +48,12 @@ const Caracteristique = () => {
               <View>
                 <Text
                   style={{
-                    fontSize: 22,
-                    fontWeight: 600,
+                    fontSize: 22 * scale,
+                    fontWeight: 600 * scale,
                     color: colors.secondary,
                     textAlign: 'center',
-                    marginTop: 30,
-                    marginBottom: 30,
+                    marginTop: 30 * scale,
+                    marginBottom: 30 * scale,
                   }}>
                  Nos meilleures fonctionnalités
                 </Text>

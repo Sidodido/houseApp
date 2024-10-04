@@ -3,67 +3,61 @@
 const menu =[
     {
         id: 1,
-        acces:"sadmin",
+        acces:"admin",
         title:"site web + application pour le departement informatique",
          category:"mobile",
          adresseIP:"192:188:433:776",
-         adresseMAC:"site web + application pour le departement informatique",
-       
+         adresseMAC:"01:80:C2:00:00:00	",       
     },
 
     {
         id: 2,
-        acces:"sadmin",
+        acces:"admin",
         title:"site web + application pour le departement informatique",
          category:"mobile",
          adresseIP:"192:188:433:776",
-         adresseMAC:"site web + application pour le departement informatique",
-
+         adresseMAC:"01:80:C2:00:00:00	",
     },
 
     {
         id: 3,
-        acces:"sadmin",
+        acces:"admin",
         title:"site web + application pour le departement informatique",
          category:"mobile",
          adresseIP:"192:188:433:776",
-         adresseMAC:"site web + application pour le departement informatique",
-
+         adresseMAC:"01:80:C2:00:00:00	",
     },
 
     {
         id: 4,
-        acces:"sain",
+        acces:"user",
         title:"site web + application pour le departement informatique",
-         category:"mobile",
+         category:"tablette",
          adresseIP:"192:188:433:776",
-         adresseMAC:"site web + application pour le departement informatique",
-    },
+         adresseMAC:"01:80:C2:00:00:00	",    },
 
     {
         id: 5,
-        acces:"sadmin",
+        acces:"user",
         title:"site web + application pour le departement informatique",
-         category:"mobile",
+         category:"tablette",
          adresseIP:"192:188:433:776",
-         adresseMAC:"site web + application pour le departement informatique",
-    },
+         adresseMAC:"01:80:C2:00:00:00	",    },
 
     {
         id: 6,
-        acces:"sadmin",
+        acces:"produit",
         title:"site web + application pour le departement informatique",
          category:"produit",
          adresseIP:"192:188:433:776",
-         adresseMAC:"site web + application pour le departement informatique",
-    },
+         adresseMAC:"01:80:C2:00:00:00	",    },
     {
         id: 7,
-        acces:"sadmin",
+        acces:"produit",
         title:"site web + application pour le departement informatique",
          category:"produit",
          adresseIP:"192:188:433:776",
-         adresseMAC:"site web + application pour le departement informatique",
+         adresseMAC:"01:80:C2:00:00:00	",
     },
     // {
     //     id: 8,

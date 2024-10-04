@@ -17,7 +17,7 @@ import {Button, Card, Switch} from 'react-native-paper';
 const {width} = Dimensions.get('window');
 const scale = width / 420;
 
-export default function Welcome2( {navigation}) {
+export default function Welcome2 ( {navigation}) {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: colors.Quaternary}}>
       <View

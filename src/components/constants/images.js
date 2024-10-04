@@ -4,9 +4,9 @@ const LOGO = require('../../assets/pageHomeAssets/LOGO.png');
 const logo2 = require('../../assets/pageHomeAssets/logo2.png');
 const logo3 = require('../../assets/pageHomeAssets/logo3.png');
 const logo4 = require('../../assets/pageHomeAssets/logo4.png');
-const service1 = require('../../assets/pageHomeAssets/service1.png');
-const service2 = require('../../assets/pageHomeAssets/service2.png');
-const service3 = require('../../assets/pageHomeAssets/service3.png');
+const service1 = require('../../assets/pageHomeAssets/service1.jpg');
+const service2 = require('../../assets/pageHomeAssets/service2.jpg');
+const service3 = require('../../assets/pageHomeAssets/service3.jpg');
 
 const produit1 = require('../../assets/pageHomeAssets/produit1.png');
 const produit2 = require('../../assets/pageHomeAssets/produit2.png');

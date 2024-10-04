@@ -619,6 +619,8 @@ export default function Parametres() {
                 backgroundColor: colors.primary,
                 marginHorizontal: 'auto',
                 borderRadius: 10 * scale,
+justifyContent:'center',
+
 alignItems:'center',
 padding:0* scale,
                 color: colors.Quaternary,
@@ -668,7 +670,7 @@ padding:0* scale,
               Changer la mot de passe
             </Text>
 
-            <TouchableOpacity style={{}} onPress={hideFifthModal}>
+            <TouchableOpacity style={{}} onPress={hideSecondModal}>
               <View></View>
               <Image
                 source={icons.exit}
@@ -759,11 +761,12 @@ padding:0* scale,
                 marginHorizontal: 'auto',
                 borderRadius: 10 * scale,
 alignItems:'center',
+justifyContent:'center',
 padding:0* scale,
                 color: colors.Quaternary,
               }}
               mode="contained"
-              onPress={hideModal}>
+              onPress={hideSecondModal}>
               <Text
                 style={{
                   color: colors.Quaternary,

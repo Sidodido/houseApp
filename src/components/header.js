@@ -27,69 +27,74 @@ const header = ({title, onPress}) => {
   const {isOpen, onOpen, onClose} = useDisclose();
   const [items, setItems] = useState([
     {
-      label: 'Play',
+      label: 'Alerte de Gaz',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+        " 23:20  Verifier votre cuisine possibilite d'une fuite de gaz",
     },
     {
-      label: 'Favourite',
+      label: 'Alerte de Gaz',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 23:10  Verifier votre cuisine possibilite d'une fuite de gaz",
     },
     {
-      label: 'Cancel',
+      label: 'Alerte de Gaz',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 23:00  Verifier votre cuisine possibilite d'une fuite de gaz",
     },
     {
-      label: 'Favourite',
+      label: 'Alerte detection de Flamme',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 17:00  Verifier votre chambre 1 possibilite d'une detection de flamme",
     },
     {
-      label: 'Cancel',
+      label: 'Alerte detection de Mouvement',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 18:30  Verifier votre Porte 1 possibilite d'une detection de mouvement",
     },
     {
-      label: 'Favourite',
+      label: 'Alerte detection de Mouvement',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 18:30  Verifier votre fenetre 1 possibilite d'une detection de mouvement",
     },
     {
-      label: 'Cancel',
+      label: 'Alerte detection de Mouvement',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 18:30  Verifier votre porte 1 possibilite d'une detection de mouvement",
     },
     {
-      label: 'Favourite',
+      label: 'Alerte de Gaz',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+        " 23:20  Verifier votre cuisine possibilite d'une fuite de gaz",
     },
     {
-      label: 'Cancel',
+      label: 'Alerte de Gaz',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 23:10  Verifier votre cuisine possibilite d'une fuite de gaz",
     },
     {
-      label: 'Favourite',
+      label: 'Alerte de Gaz',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 23:00  Verifier votre cuisine possibilite d'une fuite de gaz",
     },
     {
-      label: 'Cancel',
+      label: 'Alerte detection de Flamme',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 17:00  Verifier votre chambre 1 possibilite d'une detection de flamme",
     },
     {
-      label: 'Favourite',
+      label: 'Alerte detection de Mouvement',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 18:30  Verifier votre Porte 1 possibilite d'une detection de mouvement",
     },
     {
-      label: 'Cancel',
+      label: 'Alerte detection de Mouvement',
       description:
-        'To add a function to delete an Actionsheet.Item when pressing on the TouchableOpacity, you can create a state to store the items and update the state',
+      " 18:30  Verifier votre fenetre 1 possibilite d'une detection de mouvement",
+    },
+    {
+      label: 'Alerte detection de Mouvement',
+      description:
+      " 18:30  Verifier votre porte 1 possibilite d'une detection de mouvement",
     },
     // Add more items here
   ]);

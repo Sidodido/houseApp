@@ -6,7 +6,6 @@ import {NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 import {Dimensions, StyleSheet} from 'react-native';
 import {Button, Card, Switch} from 'react-native-paper';
-import CardPeripherique from './cardPeripherique';
 const {width} = Dimensions.get('window');
 const scale = width / 420;
 import { Fab } from 'native-base';
@@ -63,7 +62,7 @@ setItems(updatedItems);
           <View
             style={{
               width: '100%', // adjust the width to your needs
-              height: 10000 * scale, // adjust the height to your needs
+              // adjust the height to your needs
               backgroundColor: colors.tertiary,
               borderRadius: 70 * scale,
               
@@ -72,7 +71,7 @@ setItems(updatedItems);
               left: 0 * scale,
             }}>
             <NativeBaseProvider>
-              {/* here the rest of code */}
+             
 
 
            
@@ -233,8 +232,8 @@ setItems(updatedItems);
                       <Text
                         style={{
                           color: colors.secondary,
-                          fontSize: 17 * scale,
-                          fontWeight: 'bold',
+                          fontSize: 15 * scale,
+                         
                         }}>
                         {acces}
                       </Text>
@@ -257,8 +256,8 @@ setItems(updatedItems);
                       <Text
                         style={{
                           color: colors.secondary,
-                          fontSize: 17 * scale,
-                          fontWeight: 'bold',
+                          fontSize: 15 * scale,
+                         
                         }}>
                         {adresseIP}
                       </Text>
@@ -277,8 +276,8 @@ setItems(updatedItems);
                       <Text
                         style={{
                           color: colors.secondary,
-                          fontSize: 17 * scale,
-                          fontWeight: 'bold',
+                          fontSize: 15 * scale,
+                          
                         }}>
                         {adresseMAC}
                       </Text>
@@ -302,14 +301,14 @@ setItems(updatedItems);
                       
                         style={{
                           color: colors.Quaternary,
-                          fontSize: 17 * scale,
-                          fontWeight: 'bold',
+                          fontSize: 15 * scale,
+                         
                         }}>
                         Modifier
                       </Text>
                     </Button>
 
-                    {/* hna push up */}
+                  
                   </View>
                 </Card.Content>
               </Card>

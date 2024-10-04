@@ -10,9 +10,7 @@ import ScrollCardsRideaux from './scrollCardsRideaux';
 import Swiper from 'react-native-swiper';
 import {Dimensions, StyleSheet} from 'react-native';
 import Video, {VideoRef} from 'react-native-video';
-import LineChartGases from './lineChartGazes';
-import LineChartFlammes from './lineChartFlammes';
-import LineChartMouvements from './lineChartMouvements';
+
 
 const {width} = Dimensions.get('window');
 const scale = width / 420; 
@@ -35,10 +33,10 @@ export default function Home() {
         <ScrollView>
           <View
             style={{
-              width: '100%', // adjust the width to your needs
-              height: 2500, // adjust the height to your needs
+              width: '100%', 
+              height: 1500 * scale, 
               backgroundColor: colors.tertiary,
-              borderRadius: 150 * scale, // this will create a semi-circle
+              borderRadius: 150 * scale, 
               position: 'fixed',
               top: 0,
               left: 0,
@@ -844,7 +842,7 @@ export default function Home() {
 
                 {/* text caracteristiques gaz */}
 
-
+{/* 
                 <View
                   style={{
                     width: '85%',
@@ -858,11 +856,11 @@ export default function Home() {
                     }}>
                     Controle des Capteurs
                   </Text>
-                </View>
+                </View> */}
 
                 {/* div scroll  caracteristiques gaz */}
 
-
+{/* 
 <Text style={{
 color:colors.white,
 fontWeight:'bold',
@@ -890,10 +888,7 @@ gap:20
                      
  
 <LineChartGases/>
-<LineChartGases/>
-<LineChartGases/>
-<LineChartGases/>
-<LineChartGases/>
+
 
 
                       
@@ -945,11 +940,6 @@ gap:20
 
 
 
-
-
-
-
-
                     <Text  style={{
 color:colors.white,
 fontWeight:'bold',
@@ -988,7 +978,7 @@ gap:20
                     </ScrollView>
 
 
-
+ */}
 
 
 

@@ -5,9 +5,7 @@ import {View, Text, Image, ScrollView} from 'react-native';
 import {NativeBaseProvider} from 'native-base';
 import {colors, icons, images} from '../../constants';
 import {Searchbar} from 'react-native-paper';
-import Flammes from '../statistiques/Flammes';
-import Mouvements from '../statistiques/Mouvements';
-import Gazes from '../statistiques/Gazes';
+
 import {Dimensions, StyleSheet} from 'react-native';
 
 const {width} = Dimensions.get('window');

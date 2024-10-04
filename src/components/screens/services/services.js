@@ -136,7 +136,7 @@ const Services = () => {
                       marginBottom: 20,
                       fontWeight: '500',
                     }}>
-                    Decoration interne
+                    Solutions electroniques
                   </Text>
                   <TouchableOpacity>
                     <Image
